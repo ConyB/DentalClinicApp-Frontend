@@ -1,0 +1,474 @@
+{
+  "status": "pass",
+  "layouts": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "content": {
+        "x": 292,
+        "y": 96,
+        "width": 1116,
+        "height": 791.015625
+      },
+      "workspace": {
+        "x": 292,
+        "y": 337.171875,
+        "width": 1116,
+        "height": 549.84375
+      },
+      "waiting": {
+        "x": 292,
+        "y": 337.171875,
+        "width": 701.4375,
+        "height": 313.9375
+      },
+      "arrivals": {
+        "x": 1013.4375,
+        "y": 337.171875,
+        "width": 394.5625,
+        "height": 319.9375
+      },
+      "treatment": {
+        "x": 292,
+        "y": 677.109375,
+        "width": 1116,
+        "height": 209.90625
+      },
+      "row": {
+        "x": 313,
+        "y": 778.046875,
+        "width": 1074,
+        "height": 87.96875
+      },
+      "status": {
+        "x": 1093.90625,
+        "y": 810.03125,
+        "width": 87.09375,
+        "height": 24
+      },
+      "action": {
+        "x": 1193,
+        "y": 804.03125,
+        "width": 178,
+        "height": 36
+      },
+      "gap": 12,
+      "sameLine": true,
+      "sameActionParent": true,
+      "intersection": false,
+      "contained": true,
+      "noOverflow": true,
+      "workspaceStyle": {
+        "display": "grid",
+        "gridTemplateColumns": "701.438px 394.562px",
+        "gap": "20px"
+      },
+      "treatmentStyle": {
+        "gridColumnStart": "1",
+        "gridColumnEnd": "-1"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "content": {
+        "x": 292,
+        "y": 96,
+        "width": 1042,
+        "height": 834.390625
+      },
+      "workspace": {
+        "x": 292,
+        "y": 337.171875,
+        "width": 1042,
+        "height": 593.21875
+      },
+      "waiting": {
+        "x": 292,
+        "y": 337.171875,
+        "width": 654.078125,
+        "height": 313.9375
+      },
+      "arrivals": {
+        "x": 966.078125,
+        "y": 337.171875,
+        "width": 367.921875,
+        "height": 363.3125
+      },
+      "treatment": {
+        "x": 292,
+        "y": 720.484375,
+        "width": 1042,
+        "height": 209.90625
+      },
+      "row": {
+        "x": 313,
+        "y": 821.421875,
+        "width": 1000,
+        "height": 87.96875
+      },
+      "status": {
+        "x": 1019.90625,
+        "y": 853.40625,
+        "width": 87.09375,
+        "height": 24
+      },
+      "action": {
+        "x": 1119,
+        "y": 847.40625,
+        "width": 178,
+        "height": 36
+      },
+      "gap": 12,
+      "sameLine": true,
+      "sameActionParent": true,
+      "intersection": false,
+      "contained": true,
+      "noOverflow": true,
+      "workspaceStyle": {
+        "display": "grid",
+        "gridTemplateColumns": "654.078px 367.922px",
+        "gap": "20px"
+      },
+      "treatmentStyle": {
+        "gridColumnStart": "1",
+        "gridColumnEnd": "-1"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "content": {
+        "x": 292,
+        "y": -66,
+        "width": 956,
+        "height": 874.671875
+      },
+      "workspace": {
+        "x": 292,
+        "y": 175.171875,
+        "width": 956,
+        "height": 633.5
+      },
+      "waiting": {
+        "x": 292,
+        "y": 175.171875,
+        "width": 599.03125,
+        "height": 313.9375
+      },
+      "arrivals": {
+        "x": 911.03125,
+        "y": 175.171875,
+        "width": 336.953125,
+        "height": 403.59375
+      },
+      "treatment": {
+        "x": 292,
+        "y": 598.765625,
+        "width": 955.984375,
+        "height": 209.90625
+      },
+      "row": {
+        "x": 313,
+        "y": 699.703125,
+        "width": 913.984375,
+        "height": 87.96875
+      },
+      "status": {
+        "x": 933.890625,
+        "y": 731.6875,
+        "width": 87.09375,
+        "height": 24
+      },
+      "action": {
+        "x": 1032.984375,
+        "y": 725.6875,
+        "width": 178,
+        "height": 36
+      },
+      "gap": 12,
+      "sameLine": true,
+      "sameActionParent": true,
+      "intersection": false,
+      "contained": true,
+      "noOverflow": true,
+      "workspaceStyle": {
+        "display": "grid",
+        "gridTemplateColumns": "599.031px 336.953px",
+        "gap": "20px"
+      },
+      "treatmentStyle": {
+        "gridColumnStart": "1",
+        "gridColumnEnd": "-1"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "content": {
+        "x": 292,
+        "y": -66,
+        "width": 700,
+        "height": 1241.25
+      },
+      "workspace": {
+        "x": 292,
+        "y": 175.171875,
+        "width": 700,
+        "height": 1000.078125
+      },
+      "waiting": {
+        "x": 292,
+        "y": 175.171875,
+        "width": 700,
+        "height": 313.9375
+      },
+      "arrivals": {
+        "x": 292,
+        "y": 509.109375,
+        "width": 700,
+        "height": 298.25
+      },
+      "treatment": {
+        "x": 292,
+        "y": 827.359375,
+        "width": 700,
+        "height": 347.890625
+      },
+      "row": {
+        "x": 313,
+        "y": 928.296875,
+        "width": 658,
+        "height": 225.953125
+      },
+      "status": {
+        "x": 677.90625,
+        "y": 1112.25,
+        "width": 87.09375,
+        "height": 24
+      },
+      "action": {
+        "x": 777,
+        "y": 1106.25,
+        "width": 178,
+        "height": 36
+      },
+      "gap": 12,
+      "sameLine": true,
+      "sameActionParent": true,
+      "intersection": false,
+      "contained": true,
+      "noOverflow": true,
+      "workspaceStyle": {
+        "display": "grid",
+        "gridTemplateColumns": "700px",
+        "gap": "20px"
+      },
+      "treatmentStyle": {
+        "gridColumnStart": "auto",
+        "gridColumnEnd": "auto"
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "content": {
+        "x": 16,
+        "y": 88,
+        "width": 358,
+        "height": 1693.734375
+      },
+      "workspace": {
+        "x": 16,
+        "y": 631.71875,
+        "width": 358,
+        "height": 1150.015625
+      },
+      "waiting": {
+        "x": 16,
+        "y": 631.71875,
+        "width": 358,
+        "height": 305.9375
+      },
+      "arrivals": {
+        "x": 16,
+        "y": 957.65625,
+        "width": 358,
+        "height": 333.625
+      },
+      "treatment": {
+        "x": 16,
+        "y": 1311.28125,
+        "width": 358,
+        "height": 470.453125
+      },
+      "row": {
+        "x": 37,
+        "y": 1404.21875,
+        "width": 316,
+        "height": 356.515625
+      },
+      "status": {
+        "x": 163,
+        "y": 1670.734375,
+        "width": 87.09375,
+        "height": 24
+      },
+      "action": {
+        "x": 163,
+        "y": 1706.734375,
+        "width": 178,
+        "height": 42
+      },
+      "gap": 12,
+      "sameLine": false,
+      "sameActionParent": true,
+      "intersection": false,
+      "contained": true,
+      "noOverflow": true,
+      "workspaceStyle": {
+        "display": "grid",
+        "gridTemplateColumns": "358px",
+        "gap": "20px"
+      },
+      "treatmentStyle": {
+        "gridColumnStart": "auto",
+        "gridColumnEnd": "auto"
+      }
+    }
+  ],
+  "longName": {
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "content": {
+      "x": 292,
+      "y": -66,
+      "width": 1042,
+      "height": 856.078125
+    },
+    "workspace": {
+      "x": 292,
+      "y": 175.171875,
+      "width": 1042,
+      "height": 614.90625
+    },
+    "waiting": {
+      "x": 292,
+      "y": 175.171875,
+      "width": 654.078125,
+      "height": 313.9375
+    },
+    "arrivals": {
+      "x": 966.078125,
+      "y": 175.171875,
+      "width": 367.921875,
+      "height": 363.3125
+    },
+    "treatment": {
+      "x": 292,
+      "y": 558.484375,
+      "width": 1042,
+      "height": 231.59375
+    },
+    "row": {
+      "x": 313,
+      "y": 659.421875,
+      "width": 1000,
+      "height": 109.65625
+    },
+    "status": {
+      "x": 1019.90625,
+      "y": 702.25,
+      "width": 87.09375,
+      "height": 24
+    },
+    "action": {
+      "x": 1119,
+      "y": 696.25,
+      "width": 178,
+      "height": 36
+    },
+    "gap": 12,
+    "sameLine": true,
+    "sameActionParent": true,
+    "intersection": false,
+    "contained": true,
+    "noOverflow": true,
+    "workspaceStyle": {
+      "display": "grid",
+      "gridTemplateColumns": "654.078px 367.922px",
+      "gap": "20px"
+    },
+    "treatmentStyle": {
+      "gridColumnStart": "1",
+      "gridColumnEnd": "-1"
+    }
+  },
+  "multiplePatient": [
+    {
+      "row": {
+        "x": 313,
+        "y": 772.046875,
+        "width": 1000,
+        "height": 88.96875
+      },
+      "badge": {
+        "x": 1019.90625,
+        "y": 804.03125,
+        "width": 87.09375,
+        "height": 24
+      },
+      "button": {
+        "x": 1119,
+        "y": 798.03125,
+        "width": 178,
+        "height": 36
+      },
+      "intersects": false,
+      "gap": 12
+    },
+    {
+      "row": {
+        "x": 313,
+        "y": 861.015625,
+        "width": 1000,
+        "height": 87.96875
+      },
+      "badge": {
+        "x": 1019.90625,
+        "y": 893,
+        "width": 87.09375,
+        "height": 24
+      },
+      "button": {
+        "x": 1119,
+        "y": 887,
+        "width": 178,
+        "height": 36
+      },
+      "intersects": false,
+      "gap": 12
+    }
+  ],
+  "navigation": "preserved",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

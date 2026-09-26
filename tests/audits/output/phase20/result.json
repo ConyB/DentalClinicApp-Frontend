@@ -1,0 +1,122 @@
+{
+  "status": "pass",
+  "environment": "Playwright Chromium headless",
+  "viewports": [
+    "1366x768",
+    "390x844"
+  ],
+  "navigation": {
+    "Clinic Administrator": {
+      "routes": [
+        "dashboard",
+        "patients",
+        "appointments",
+        "waiting-room",
+        "clinical/encounters",
+        "treatment-plans",
+        "procedures",
+        "billing/invoices",
+        "billing/payments",
+        "billing/receipts",
+        "outstanding-balances",
+        "recalls",
+        "reports",
+        "users",
+        "clinic-settings",
+        "profile"
+      ],
+      "desktop": "pass",
+      "mobile": "pass"
+    },
+    "Dentist": {
+      "routes": [
+        "dashboard",
+        "appointments",
+        "waiting-room",
+        "patients",
+        "clinical/encounters",
+        "clinical/dental-chart",
+        "treatment-plans",
+        "procedures",
+        "prescriptions",
+        "recalls",
+        "reports",
+        "clinic-settings",
+        "profile"
+      ],
+      "desktop": "pass",
+      "mobile": "pass"
+    },
+    "Receptionist": {
+      "routes": [
+        "dashboard",
+        "patients",
+        "appointments",
+        "waiting-room",
+        "recalls",
+        "reports",
+        "clinic-settings",
+        "profile"
+      ],
+      "desktop": "pass",
+      "mobile": "pass"
+    },
+    "Cashier": {
+      "routes": [
+        "dashboard",
+        "patients",
+        "billing/invoices",
+        "billing/payments",
+        "billing/receipts",
+        "outstanding-balances",
+        "reports",
+        "clinic-settings",
+        "profile"
+      ],
+      "desktop": "pass",
+      "mobile": "pass"
+    }
+  },
+  "routes": {
+    "tested": 165,
+    "invalid": "safe 404",
+    "deniedDomLeaks": 0
+  },
+  "authentication": {
+    "loggedOutDirectRoute": "denied",
+    "inactiveMiriam": "denied",
+    "tamperedRoles": "denied",
+    "roleChangeRecomputed": true
+  },
+  "privacy": {
+    "cashierClinicalPhi": "not rendered",
+    "receptionist": "allergy safety summary only",
+    "searchClickThrough": "guarded"
+  },
+  "ownership": {
+    "brendaDraft": {
+      "Sarah": "editable",
+      "Daniel": "read-only",
+      "Administrator": "read-only"
+    },
+    "completedEncounter": "locked"
+  },
+  "store": {
+    "deniedAttackCases": 15,
+    "authorizedControls": 4,
+    "atomicStateDeltaOnDenied": 0
+  },
+  "output": {
+    "reportPrint": "role-scoped",
+    "csv": "role-scoped",
+    "stateSideEffects": 0
+  },
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "missingAssets": [],
+    "apiRequests": []
+  }
+}

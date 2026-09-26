@@ -1,0 +1,48 @@
+{
+  "status": "pass",
+  "roles": [
+    "administrator",
+    "dentist",
+    "receptionist",
+    "cashier"
+  ],
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "width": 1366,
+      "height": 768
+    },
+    {
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "checks": [
+    "empty state",
+    "keyboard",
+    "outside click",
+    "profile coexistence",
+    "rerender listeners",
+    "privacy",
+    "dirty state",
+    "responsive fit",
+    "console",
+    "network",
+    "encoding"
+  ],
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

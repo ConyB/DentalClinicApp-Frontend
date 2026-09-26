@@ -1,0 +1,36 @@
+{
+  "status": "technical-pass",
+  "playwright": "1.63.0",
+  "chromium": "153.0.8010.12",
+  "patientContext": "switching, invalid contexts, resource ownership, and session isolation pass",
+  "operationalWorkflow": "appointment/queue/encounter states remain distinct; ownership and waiting-room layout pass",
+  "encounters": "current/historical resolution, draft/completed treatment, validation, confirmation, dirty navigation pass",
+  "medicalSafety": "allergies, conditions, medications, no-record semantics, and prescription context pass",
+  "odontogram": "FDI orientation, dentition distinction, no-record/Healthy, Missing/Extracted, multi-state, surfaces, planned overlay, keyboard and legend pass",
+  "treatmentPlans": "item acceptance/progress and Proposed/Accepted/Completed value separation pass",
+  "boundaries": "finding != plan; plan != procedure; procedure != invoice/payment; prescription != medical history/finance; document has no tooth/procedure link",
+  "responsive": {
+    "1366x768": "pass",
+    "1024x768": "pass",
+    "390x844": "pass"
+  },
+  "screenshots": [
+    "amina-clinical-1366.png",
+    "amina-odontogram-1366.png",
+    "samuel-treatment-plan-1366.png",
+    "mercy-primary-dentition-1366.png",
+    "brenda-encounter-1366.png",
+    "prescription-safety-1366.png",
+    "clinical-documents-1366.png"
+  ],
+  "finalReset": "canonical and clean",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "missingAssets": [],
+    "apiRequests": []
+  },
+  "clinicalReviewer": "Practicing Dentist/Dental Surgeon sign-off remains an external Phase 22 gate per docs/11_FRONTEND_IMPLEMENTATION_PLAN.md."
+}

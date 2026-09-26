@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "browser": "chromium/playwright available",
+  "canonicalCrossClinicalViews": "Amina, Esther, Mercy, Samuel, Peter pass",
+  "patientSwitchAndPrivacy": "pass",
+  "plannedOverlay": "pass",
+  "shellAndWaitingRoomRegression": "pass",
+  "responsive": "1440×900, 1366×768, 1280×720, 1024×768, 390×844 pass",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

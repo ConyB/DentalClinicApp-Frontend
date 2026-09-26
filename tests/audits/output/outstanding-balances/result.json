@@ -1,0 +1,60 @@
+{
+  "status": "pass",
+  "route": "#/outstanding-balances",
+  "canonical": {
+    "Joseph": 300000,
+    "Amina": 70000,
+    "Samuel": 50000,
+    "total": 420000,
+    "order": "balance descending"
+  },
+  "workspace": {
+    "title": "pass",
+    "kpis": "pass",
+    "search": "pass",
+    "filters": "pass",
+    "sorting": "pass",
+    "invoiceDrawer": "pass",
+    "paymentModal": "pass",
+    "emptyState": "pass"
+  },
+  "roles": {
+    "admin": "allowed",
+    "cashier": "allowed",
+    "dentists": "denied",
+    "receptionist": "denied",
+    "sessionLeakage": "none"
+  },
+  "payment": {
+    "dirtyGuard": "stay/discard pass",
+    "partial": "pass",
+    "full": "pass",
+    "doubleSubmit": "pass",
+    "overpayment": "pass",
+    "receipt": "pass"
+  },
+  "reconciliation": {
+    "dashboard": "pass",
+    "patientProfile": "pass",
+    "reports": "pass",
+    "invoiceDetail": "pass"
+  },
+  "responsive": [
+    "1440×900",
+    "1366×768",
+    "1280×720",
+    "1024×768",
+    "390×844"
+  ],
+  "accessibility": "pass",
+  "reset": "canonical",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "apiRequests": [],
+    "paymentProviderRequests": []
+  }
+}

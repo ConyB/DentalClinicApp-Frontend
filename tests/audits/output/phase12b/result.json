@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "staticChartIntegrity": {
+    "valid": true,
+    "errors": [],
+    "summary": {
+      "permanent": 32,
+      "primary": 20,
+      "total": 52,
+      "duplicateCodes": 0
+    }
+  },
+  "staticCanonicalIntegrity": {
+    "valid": true,
+    "errors": []
+  },
+  "runtimeFindingId": "CHART-032",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "width": 1366,
+      "height": 768
+    },
+    {
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "testedRoles": [
+    "Clinic Administrator",
+    "Dr. Daniel",
+    "Dr. Sarah",
+    "Receptionist",
+    "Cashier"
+  ],
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

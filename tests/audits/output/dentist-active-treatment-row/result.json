@@ -1,0 +1,512 @@
+{
+  "status": "pass",
+  "component": "dashboard-current-row",
+  "daniel": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "layoutMode": "inline controls",
+      "rowWidth": 379.90625,
+      "informationWidth": 379.90625,
+      "actionRowWidth": 379.90625,
+      "statusWidth": 87.09375,
+      "buttonWidth": 202,
+      "gap": 12,
+      "sameActionParent": true,
+      "styles": {
+        "row": {
+          "display": "grid",
+          "gridTemplateColumns": "379.906px",
+          "minWidth": "0px"
+        },
+        "information": {
+          "display": "grid",
+          "gridTemplateColumns": "181.953px 181.953px",
+          "minWidth": "0px"
+        },
+        "actions": {
+          "display": "flex",
+          "width": "379.906px",
+          "minWidth": "0px",
+          "justifySelf": "stretch",
+          "columnGap": "12px",
+          "rowGap": "12px"
+        },
+        "status": {
+          "whiteSpace": "nowrap",
+          "flexShrink": "0",
+          "width": "87.0938px"
+        },
+        "button": {
+          "flexShrink": "0",
+          "width": "202px"
+        }
+      },
+      "intersection": false,
+      "globalOverflow": false
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "layoutMode": "inline controls",
+      "rowWidth": 351.328125,
+      "informationWidth": 351.328125,
+      "actionRowWidth": 351.328125,
+      "statusWidth": 87.09375,
+      "buttonWidth": 202,
+      "gap": 12,
+      "sameActionParent": true,
+      "styles": {
+        "row": {
+          "display": "grid",
+          "gridTemplateColumns": "351.328px",
+          "minWidth": "0px"
+        },
+        "information": {
+          "display": "grid",
+          "gridTemplateColumns": "167.656px 167.672px",
+          "minWidth": "0px"
+        },
+        "actions": {
+          "display": "flex",
+          "width": "351.328px",
+          "minWidth": "0px",
+          "justifySelf": "stretch",
+          "columnGap": "12px",
+          "rowGap": "12px"
+        },
+        "status": {
+          "whiteSpace": "nowrap",
+          "flexShrink": "0",
+          "width": "87.0938px"
+        },
+        "button": {
+          "flexShrink": "0",
+          "width": "202px"
+        }
+      },
+      "intersection": false,
+      "globalOverflow": false
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "layoutMode": "inline controls",
+      "rowWidth": 318.078125,
+      "informationWidth": 318.078125,
+      "actionRowWidth": 318.078125,
+      "statusWidth": 87.09375,
+      "buttonWidth": 202,
+      "gap": 12,
+      "sameActionParent": true,
+      "styles": {
+        "row": {
+          "display": "grid",
+          "gridTemplateColumns": "318.078px",
+          "minWidth": "0px"
+        },
+        "information": {
+          "display": "grid",
+          "gridTemplateColumns": "151.031px 151.047px",
+          "minWidth": "0px"
+        },
+        "actions": {
+          "display": "flex",
+          "width": "318.078px",
+          "minWidth": "0px",
+          "justifySelf": "stretch",
+          "columnGap": "12px",
+          "rowGap": "12px"
+        },
+        "status": {
+          "whiteSpace": "nowrap",
+          "flexShrink": "0",
+          "width": "87.0938px"
+        },
+        "button": {
+          "flexShrink": "0",
+          "width": "202px"
+        }
+      },
+      "intersection": false,
+      "globalOverflow": false
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "layoutMode": "stacked controls",
+      "rowWidth": 296,
+      "informationWidth": 296,
+      "actionRowWidth": 296,
+      "statusWidth": 87.09375,
+      "buttonWidth": 202,
+      "gap": 12,
+      "sameActionParent": true,
+      "styles": {
+        "row": {
+          "display": "grid",
+          "gridTemplateColumns": "296px",
+          "minWidth": "0px"
+        },
+        "information": {
+          "display": "grid",
+          "gridTemplateColumns": "140px 140px",
+          "minWidth": "0px"
+        },
+        "actions": {
+          "display": "grid",
+          "width": "296px",
+          "minWidth": "0px",
+          "justifySelf": "stretch",
+          "columnGap": "12px",
+          "rowGap": "12px"
+        },
+        "status": {
+          "whiteSpace": "nowrap",
+          "flexShrink": "0",
+          "width": "87.0938px"
+        },
+        "button": {
+          "flexShrink": "0",
+          "width": "202px"
+        }
+      },
+      "intersection": false,
+      "globalOverflow": false
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "layoutMode": "stacked controls",
+      "rowWidth": 316,
+      "informationWidth": 316,
+      "actionRowWidth": 316,
+      "statusWidth": 87.09375,
+      "buttonWidth": 202,
+      "gap": 12,
+      "sameActionParent": true,
+      "styles": {
+        "row": {
+          "display": "grid",
+          "gridTemplateColumns": "316px",
+          "minWidth": "0px"
+        },
+        "information": {
+          "display": "grid",
+          "gridTemplateColumns": "150px 150px",
+          "minWidth": "0px"
+        },
+        "actions": {
+          "display": "grid",
+          "width": "316px",
+          "minWidth": "0px",
+          "justifySelf": "stretch",
+          "columnGap": "12px",
+          "rowGap": "12px"
+        },
+        "status": {
+          "whiteSpace": "nowrap",
+          "flexShrink": "0",
+          "width": "87.0938px"
+        },
+        "button": {
+          "flexShrink": "0",
+          "width": "202px"
+        }
+      },
+      "intersection": false,
+      "globalOverflow": false
+    }
+  ],
+  "sarah": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "layoutMode": "inline controls",
+      "rowWidth": 379.90625,
+      "informationWidth": 379.90625,
+      "actionRowWidth": 379.90625,
+      "statusWidth": 60.234375,
+      "buttonWidth": 207.40625,
+      "gap": 12,
+      "sameActionParent": true,
+      "styles": {
+        "row": {
+          "display": "grid",
+          "gridTemplateColumns": "379.906px",
+          "minWidth": "0px"
+        },
+        "information": {
+          "display": "grid",
+          "gridTemplateColumns": "181.953px 181.953px",
+          "minWidth": "0px"
+        },
+        "actions": {
+          "display": "flex",
+          "width": "379.906px",
+          "minWidth": "0px",
+          "justifySelf": "stretch",
+          "columnGap": "12px",
+          "rowGap": "12px"
+        },
+        "status": {
+          "whiteSpace": "nowrap",
+          "flexShrink": "0",
+          "width": "60.2344px"
+        },
+        "button": {
+          "flexShrink": "0",
+          "width": "207.406px"
+        }
+      },
+      "intersection": false,
+      "globalOverflow": false
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "layoutMode": "inline controls",
+      "rowWidth": 351.328125,
+      "informationWidth": 351.328125,
+      "actionRowWidth": 351.328125,
+      "statusWidth": 60.234375,
+      "buttonWidth": 207.40625,
+      "gap": 12,
+      "sameActionParent": true,
+      "styles": {
+        "row": {
+          "display": "grid",
+          "gridTemplateColumns": "351.328px",
+          "minWidth": "0px"
+        },
+        "information": {
+          "display": "grid",
+          "gridTemplateColumns": "167.656px 167.672px",
+          "minWidth": "0px"
+        },
+        "actions": {
+          "display": "flex",
+          "width": "351.328px",
+          "minWidth": "0px",
+          "justifySelf": "stretch",
+          "columnGap": "12px",
+          "rowGap": "12px"
+        },
+        "status": {
+          "whiteSpace": "nowrap",
+          "flexShrink": "0",
+          "width": "60.2344px"
+        },
+        "button": {
+          "flexShrink": "0",
+          "width": "207.406px"
+        }
+      },
+      "intersection": false,
+      "globalOverflow": false
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "layoutMode": "inline controls",
+      "rowWidth": 318.078125,
+      "informationWidth": 318.078125,
+      "actionRowWidth": 318.078125,
+      "statusWidth": 60.234375,
+      "buttonWidth": 207.40625,
+      "gap": 12,
+      "sameActionParent": true,
+      "styles": {
+        "row": {
+          "display": "grid",
+          "gridTemplateColumns": "318.078px",
+          "minWidth": "0px"
+        },
+        "information": {
+          "display": "grid",
+          "gridTemplateColumns": "151.031px 151.047px",
+          "minWidth": "0px"
+        },
+        "actions": {
+          "display": "flex",
+          "width": "318.078px",
+          "minWidth": "0px",
+          "justifySelf": "stretch",
+          "columnGap": "12px",
+          "rowGap": "12px"
+        },
+        "status": {
+          "whiteSpace": "nowrap",
+          "flexShrink": "0",
+          "width": "60.2344px"
+        },
+        "button": {
+          "flexShrink": "0",
+          "width": "207.406px"
+        }
+      },
+      "intersection": false,
+      "globalOverflow": false
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "layoutMode": "stacked controls",
+      "rowWidth": 296,
+      "informationWidth": 296,
+      "actionRowWidth": 296,
+      "statusWidth": 60.234375,
+      "buttonWidth": 207.40625,
+      "gap": 12,
+      "sameActionParent": true,
+      "styles": {
+        "row": {
+          "display": "grid",
+          "gridTemplateColumns": "296px",
+          "minWidth": "0px"
+        },
+        "information": {
+          "display": "grid",
+          "gridTemplateColumns": "140px 140px",
+          "minWidth": "0px"
+        },
+        "actions": {
+          "display": "grid",
+          "width": "296px",
+          "minWidth": "0px",
+          "justifySelf": "stretch",
+          "columnGap": "12px",
+          "rowGap": "12px"
+        },
+        "status": {
+          "whiteSpace": "nowrap",
+          "flexShrink": "0",
+          "width": "60.2344px"
+        },
+        "button": {
+          "flexShrink": "0",
+          "width": "207.406px"
+        }
+      },
+      "intersection": false,
+      "globalOverflow": false
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "layoutMode": "stacked controls",
+      "rowWidth": 316,
+      "informationWidth": 316,
+      "actionRowWidth": 316,
+      "statusWidth": 60.234375,
+      "buttonWidth": 207.40625,
+      "gap": 12,
+      "sameActionParent": true,
+      "styles": {
+        "row": {
+          "display": "grid",
+          "gridTemplateColumns": "316px",
+          "minWidth": "0px"
+        },
+        "information": {
+          "display": "grid",
+          "gridTemplateColumns": "150px 150px",
+          "minWidth": "0px"
+        },
+        "actions": {
+          "display": "grid",
+          "width": "316px",
+          "minWidth": "0px",
+          "justifySelf": "stretch",
+          "columnGap": "12px",
+          "rowGap": "12px"
+        },
+        "status": {
+          "whiteSpace": "nowrap",
+          "flexShrink": "0",
+          "width": "60.2344px"
+        },
+        "button": {
+          "flexShrink": "0",
+          "width": "207.406px"
+        }
+      },
+      "intersection": false,
+      "globalOverflow": false
+    }
+  ],
+  "longNameStress": {
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "layoutMode": "inline controls",
+    "rowWidth": 351.328125,
+    "informationWidth": 351.328125,
+    "actionRowWidth": 351.328125,
+    "statusWidth": 87.09375,
+    "buttonWidth": 202,
+    "gap": 12,
+    "sameActionParent": true,
+    "styles": {
+      "row": {
+        "display": "grid",
+        "gridTemplateColumns": "351.328px",
+        "minWidth": "0px"
+      },
+      "information": {
+        "display": "grid",
+        "gridTemplateColumns": "167.656px 167.672px",
+        "minWidth": "0px"
+      },
+      "actions": {
+        "display": "flex",
+        "width": "351.328px",
+        "minWidth": "0px",
+        "justifySelf": "stretch",
+        "columnGap": "12px",
+        "rowGap": "12px"
+      },
+      "status": {
+        "whiteSpace": "nowrap",
+        "flexShrink": "0",
+        "width": "87.0938px"
+      },
+      "button": {
+        "flexShrink": "0",
+        "width": "202px"
+      }
+    },
+    "intersection": false,
+    "globalOverflow": false
+  },
+  "navigation": "preserved",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

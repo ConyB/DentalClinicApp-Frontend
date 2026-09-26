@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "roles": {
+    "dentist": "create / present / accept pass",
+    "administrator": "read-only pass",
+    "receptionist": "workspace denied pass",
+    "cashier": "workspace denied pass"
+  },
+  "lifecycle": "pass",
+  "responsive": "1440, 1366, 1024, 390 pass",
+  "console": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

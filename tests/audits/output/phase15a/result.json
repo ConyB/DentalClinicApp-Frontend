@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "canonical": "six invoices and UGX 420,000 outstanding",
+  "runtimeInvoice": "INV-000607",
+  "responsive": "1440, 1366, 1280, 1024, 390",
+  "roles": "administrator/cashier allowed; dentist/receptionist denied",
+  "reset": "pass",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

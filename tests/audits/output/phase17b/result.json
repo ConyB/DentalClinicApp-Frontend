@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "canonical": "6 users; 5 active; 1 inactive; 2 active Dentists",
+  "lifecycle": "create U007, edit role/status, inactive login denial, reactivated runtime cashier",
+  "dirty": "dedicated source and discard verified",
+  "roles": "administrator allowed; dentist/receptionist/cashier denied",
+  "responsive": "1440/1366/1280/1024/390",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

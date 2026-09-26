@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "browser": "Chromium via Playwright 1.63.0",
+  "canonicalPrescription": "Samuel pass",
+  "medicalSafety": "Amina, Peter, Samuel, Joseph pass",
+  "runtimePrescription": {
+    "id": "RX-000502",
+    "patientId": "P001",
+    "dentistUserId": "U002",
+    "encounterId": null
+  },
+  "canonicalDocuments": "Amina, Peter pre/post RCT, Esther pass",
+  "runtimeDocument": {
+    "id": "DOC-005",
+    "patientId": "P001",
+    "type": "CLINICAL_PHOTO",
+    "encounterId": "ENC-000201"
+  },
+  "frontendFileModel": "metadata only; temporary blob preview; honest refresh fallback",
+  "dirtyCoexistence": "prescription, clinical-document, clinical-encounter, medical-history, odontogram, treatment-plan, procedure pass",
+  "roleMatrixAndSessionLeakage": "pass",
+  "patientSwitchAndPrivacy": "pass",
+  "crossModuleAndFinanceIsolation": "pass",
+  "responsive": "1440x900, 1366x768, 1280x720, 1024x768, 390x844 pass",
+  "waitingRoomRegression": "pass",
+  "runtimeIntegrityAndReset": "pass",
+  "screenshots": "E:\\DentalApp\\tests\\audits\\output\\phase14c",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": [],
+    "uploadRequests": []
+  }
+}

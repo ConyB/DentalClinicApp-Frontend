@@ -1,0 +1,388 @@
+{
+  "status": "pass",
+  "route": "#/clinical/encounters",
+  "canonical": {
+    "Amina": "ENC-000201 COMPLETED",
+    "Joan": "ENC-000202 COMPLETED",
+    "Brenda": "ENC-000203 DRAFT",
+    "Peter": "ENC-000204 COMPLETED"
+  },
+  "register": {
+    "kpis": "pass",
+    "search": "pass",
+    "filters": "pass",
+    "sorting": "pass",
+    "minimumPhi": "pass",
+    "readOnly": "pass"
+  },
+  "clinicalWorkspace": {
+    "completedReadOnly": "pass",
+    "ownerResume": "pass",
+    "wrongDentistReadOnly": "pass",
+    "dirtySource": "clinical-encounter",
+    "historicalCurrentResolution": "pass",
+    "invalidId": "safe"
+  },
+  "roles": {
+    "admin": "view all/read-only",
+    "Daniel": "own register",
+    "Sarah": "own register/resume own draft",
+    "receptionist": "denied",
+    "cashier": "denied",
+    "sessionLeakage": "none"
+  },
+  "responsive": [
+    "1440×900",
+    "1366×768",
+    "1280×720",
+    "1024×768",
+    "390×844"
+  ],
+  "accessibility": "pass",
+  "waitingRoom": "pass",
+  "shell": "pass",
+  "sidebar": {
+    "Clinic Administrator": [
+      {
+        "label": "Dashboard",
+        "route": "dashboard",
+        "title": "Dashboard | Pearl Smile Dental Clinic",
+        "heading": "Dashboard",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Patients",
+        "route": "patients",
+        "title": "Patients | Pearl Smile Dental Clinic",
+        "heading": "Patients",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Appointments",
+        "route": "appointments",
+        "title": "Appointments | Pearl Smile Dental Clinic",
+        "heading": "Appointments",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Waiting Room",
+        "route": "waiting-room",
+        "title": "Waiting Room | Pearl Smile Dental Clinic",
+        "heading": "Waiting Room",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Encounters",
+        "route": "clinical/encounters",
+        "title": "Encounters | Pearl Smile Dental Clinic",
+        "heading": "Encounters",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Treatment Plans",
+        "route": "treatment-plans",
+        "title": "Treatment Plans | Pearl Smile Dental Clinic",
+        "heading": "Treatment Plans",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Procedures Performed",
+        "route": "procedures",
+        "title": "Procedures Performed | Pearl Smile Dental Clinic",
+        "heading": "Procedures Performed",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Invoices",
+        "route": "billing/invoices",
+        "title": "Invoices | Pearl Smile Dental Clinic",
+        "heading": "Invoices",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Payments",
+        "route": "billing/payments",
+        "title": "Payments | Pearl Smile Dental Clinic",
+        "heading": "Payments",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Receipts",
+        "route": "billing/receipts",
+        "title": "Receipts | Pearl Smile Dental Clinic",
+        "heading": "Receipts",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Outstanding Balances",
+        "route": "outstanding-balances",
+        "title": "Outstanding Balances | Pearl Smile Dental Clinic",
+        "heading": "Outstanding Balances",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Recalls & Follow-Ups",
+        "route": "recalls",
+        "title": "Recalls & Follow-Ups | Pearl Smile Dental Clinic",
+        "heading": "Recalls & Follow-Up",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Reports",
+        "route": "reports",
+        "title": "Reports | Pearl Smile Dental Clinic",
+        "heading": "Reports",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Users & Staff",
+        "route": "users",
+        "title": "Users & Staff | Pearl Smile Dental Clinic",
+        "heading": "Users & Staff",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Clinic Settings",
+        "route": "clinic-settings",
+        "title": "Settings | Pearl Smile Dental Clinic",
+        "heading": "Clinic Settings",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Profile",
+        "route": "profile",
+        "title": "My Profile | Pearl Smile Dental Clinic",
+        "heading": "My Profile",
+        "status": "IMPLEMENTED"
+      }
+    ],
+    "Dentist": [
+      {
+        "label": "Dashboard",
+        "route": "dashboard",
+        "title": "Dashboard | Pearl Smile Dental Clinic",
+        "heading": "Dashboard",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "My Appointments",
+        "route": "appointments",
+        "title": "Appointments | Pearl Smile Dental Clinic",
+        "heading": "Appointments",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Waiting Patients",
+        "route": "waiting-room",
+        "title": "Waiting Room | Pearl Smile Dental Clinic",
+        "heading": "Waiting Room",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Patients",
+        "route": "patients",
+        "title": "Patients | Pearl Smile Dental Clinic",
+        "heading": "Patients",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Encounters",
+        "route": "clinical/encounters",
+        "title": "Encounters | Pearl Smile Dental Clinic",
+        "heading": "Encounters",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Dental Chart",
+        "route": "clinical/dental-chart",
+        "title": "Dental Chart | Pearl Smile Dental Clinic",
+        "heading": "Dental Chart",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Treatment Plans",
+        "route": "treatment-plans",
+        "title": "Treatment Plans | Pearl Smile Dental Clinic",
+        "heading": "Treatment Plans",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Procedures Performed",
+        "route": "procedures",
+        "title": "Procedures Performed | Pearl Smile Dental Clinic",
+        "heading": "Procedures Performed",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Prescriptions",
+        "route": "prescriptions",
+        "title": "Prescriptions | Pearl Smile Dental Clinic",
+        "heading": "Prescriptions",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Recalls & Follow-Ups",
+        "route": "recalls",
+        "title": "Recalls & Follow-Ups | Pearl Smile Dental Clinic",
+        "heading": "Recalls & Follow-Up",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Reports",
+        "route": "reports",
+        "title": "Reports | Pearl Smile Dental Clinic",
+        "heading": "Reports",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Clinic Settings",
+        "route": "clinic-settings",
+        "title": "Settings | Pearl Smile Dental Clinic",
+        "heading": "Clinic Settings",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Profile",
+        "route": "profile",
+        "title": "My Profile | Pearl Smile Dental Clinic",
+        "heading": "My Profile",
+        "status": "IMPLEMENTED"
+      }
+    ],
+    "Receptionist": [
+      {
+        "label": "Dashboard",
+        "route": "dashboard",
+        "title": "Dashboard | Pearl Smile Dental Clinic",
+        "heading": "Dashboard",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Patients",
+        "route": "patients",
+        "title": "Patients | Pearl Smile Dental Clinic",
+        "heading": "Patients",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Appointments",
+        "route": "appointments",
+        "title": "Appointments | Pearl Smile Dental Clinic",
+        "heading": "Appointments",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Waiting Room",
+        "route": "waiting-room",
+        "title": "Waiting Room | Pearl Smile Dental Clinic",
+        "heading": "Waiting Room",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Recalls & Follow-Ups",
+        "route": "recalls",
+        "title": "Recalls & Follow-Ups | Pearl Smile Dental Clinic",
+        "heading": "Recalls & Follow-Up",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Selected Reports",
+        "route": "reports",
+        "title": "Reports | Pearl Smile Dental Clinic",
+        "heading": "Reports",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Clinic Settings",
+        "route": "clinic-settings",
+        "title": "Settings | Pearl Smile Dental Clinic",
+        "heading": "Clinic Settings",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Profile",
+        "route": "profile",
+        "title": "My Profile | Pearl Smile Dental Clinic",
+        "heading": "My Profile",
+        "status": "IMPLEMENTED"
+      }
+    ],
+    "Cashier": [
+      {
+        "label": "Dashboard",
+        "route": "dashboard",
+        "title": "Dashboard | Pearl Smile Dental Clinic",
+        "heading": "Dashboard",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Patient Search",
+        "route": "patients",
+        "title": "Patients | Pearl Smile Dental Clinic",
+        "heading": "Patients",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Invoices",
+        "route": "billing/invoices",
+        "title": "Invoices | Pearl Smile Dental Clinic",
+        "heading": "Invoices",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Payments",
+        "route": "billing/payments",
+        "title": "Payments | Pearl Smile Dental Clinic",
+        "heading": "Payments",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Receipts",
+        "route": "billing/receipts",
+        "title": "Receipts | Pearl Smile Dental Clinic",
+        "heading": "Receipts",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Outstanding Balances",
+        "route": "outstanding-balances",
+        "title": "Outstanding Balances | Pearl Smile Dental Clinic",
+        "heading": "Outstanding Balances",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Selected Reports",
+        "route": "reports",
+        "title": "Reports | Pearl Smile Dental Clinic",
+        "heading": "Reports",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Clinic Settings",
+        "route": "clinic-settings",
+        "title": "Settings | Pearl Smile Dental Clinic",
+        "heading": "Clinic Settings",
+        "status": "IMPLEMENTED"
+      },
+      {
+        "label": "Profile",
+        "route": "profile",
+        "title": "My Profile | Pearl Smile Dental Clinic",
+        "heading": "My Profile",
+        "status": "IMPLEMENTED"
+      }
+    ]
+  },
+  "remainingPlaceholderRoutes": [],
+  "remainingPageNotFoundRoutes": [],
+  "brokenSidebarDestinations": [],
+  "reset": "canonical",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "apiRequests": []
+  }
+}

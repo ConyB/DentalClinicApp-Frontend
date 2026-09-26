@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pearl Smile Dental Clinic application sign-in">
+  <title>Sign In | Pearl Smile Dental Clinic</title>
+  <link rel="icon" type="image/png" href="assets/images/branding/pearl-smile-icon.png">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+  <link rel="stylesheet" href="assets/css/print.css" media="print">
+  <link rel="stylesheet" href="assets/css/modules/auth.css">
+</head>
+<body>
+  <main class="login-page">
+    <section class="login-visual">
+      <img class="login-visual__mark" src="assets/images/branding/pearl-smile-icon.png" alt="Pearl Smile Dental Clinic logo" onerror="this.style.display='none'">
+      <p class="eyebrow">Pearl Smile Dental Clinic</p>
+      <h1>Dental Practice Management System</h1>
+      <p>Smarter dental practice management, from appointment to follow-up.</p>
+    </section>
+    <section class="login-panel" aria-labelledby="login-title">
+      <p class="login-panel__brand">Pearl Smile Dental Clinic</p>
+      <div>
+        <h1 id="login-title">Welcome back</h1>
+        <p>Sign in to manage your dental practice.</p>
+      </div>
+      <form id="login-form" class="login-form" novalidate>
+        <div class="field">
+          <label class="field__label" for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="username" required>
+        </div>
+        <div class="field">
+          <label class="field__label" for="password">Password</label>
+          <div class="login-password">
+            <input id="password" name="password" type="password" autocomplete="current-password" required>
+            <button id="password-toggle" class="button button--ghost button--small" type="button" aria-label="Show password">Show</button>
+          </div>
+        </div>
+        <p id="login-error" class="login-error" role="alert" hidden></p>
+        <label class="login-remember">
+          <input name="remember" type="checkbox"> Remember me
+        </label>
+        <button class="button button--primary" type="submit">Sign In</button>
+      </form>
+      <section class="demo-accounts" aria-label="Demo accounts">
+        <strong>Demo accounts</strong>
+        <small>Development only &middot; password: Demo@123</small>
+        <div class="demo-accounts__list">
+          <button class="button button--ghost button--small" data-demo-email="grace.admin@pearlsmiledental.test" type="button">Administrator</button>
+          <button class="button button--ghost button--small" data-demo-email="daniel.mugisha@pearlsmiledental.test" type="button">Dentist</button>
+          <button class="button button--ghost button--small" data-demo-email="lydia.reception@pearlsmiledental.test" type="button">Receptionist</button>
+          <button class="button button--ghost button--small" data-demo-email="brian.cashier@pearlsmiledental.test" type="button">Cashier</button>
+        </div>
+      </section>
+      <footer class="login-footer">
+        <span>Developed with</span>
+        <span class="visually-hidden">love</span>
+        <i data-lucide="heart" class="footer-heart" aria-hidden="true"></i>
+        <span>by BaCorn Tech</span>
+      </footer>
+    </section>
+  </main>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <script type="module">import { initializeLogin } from './assets/js/modules/auth.js'; initializeLogin();</script>
+</body>
+</html>

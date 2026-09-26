@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "route": "global register",
+  "canonicalPlans": "Amina/Esther/Samuel/Mercy pass",
+  "search": "continuous/focus/single-clear pass",
+  "roles": "administrator/Daniel/Sarah/receptionist/cashier pass",
+  "ownership": "pass",
+  "isolation": "read-only",
+  "responsive": "1440/1366/1280/1024/390 pass",
+  "proceduresRoute": "implemented read-only register",
+  "phase5": "pass",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

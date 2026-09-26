@@ -1,0 +1,42 @@
+.billing-workspace { display:grid; width:min(100%,var(--content-max-width)); min-width:0; gap:var(--space-5); margin:0 auto; }
+.billing-workspace__region,.billing-workspace__list,.billing-workspace__results { display:grid; min-width:0; gap:var(--space-4); }
+.billing-workspace > .card,.billing-workspace .card__body { min-width:0; }
+.billing-workspace__metrics { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--space-4); }
+.outstanding-balances__metrics { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.billing__detail { display:grid; gap:var(--space-4); min-width:0; }
+.billing__detail-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:var(--space-3); }
+.billing__detail-heading p:last-child,.billing__muted { color:var(--color-text-muted); font-size:var(--text-sm); }
+.billing__summary { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--space-3); margin:0; }
+.billing__summary div { min-width:0; padding:var(--space-3); border-radius:var(--radius-md); background:var(--color-surface-muted); }
+.billing__summary dt { color:var(--color-text-muted); font-size:var(--text-caption); }
+.billing__summary dd { margin:var(--space-1) 0 0; overflow-wrap:anywhere; font-size:var(--text-base); font-weight:var(--font-weight-bold); }
+.billing__items,.billing__history-list { display:grid; gap:var(--space-2); margin:0; padding:0; list-style:none; }
+.billing__item { display:flex; justify-content:space-between; gap:var(--space-4); padding:var(--space-3); border:var(--border-width) solid var(--color-border); border-radius:var(--radius-md); }
+.billing__item div,.billing__history-list li { display:grid; gap:var(--space-1); min-width:0; }
+.billing__item span,.billing__history-list span,.billing__notes { color:var(--color-text-muted); font-size:var(--text-sm); overflow-wrap:anywhere; white-space:pre-wrap; }
+.billing__history-list li { padding-bottom:var(--space-2); border-bottom:var(--border-width) solid var(--color-border); }
+.billing__form-error { margin:0; padding:var(--space-3); border-radius:var(--radius-md); background:var(--color-danger-soft); color:var(--color-danger); font-size:var(--text-sm); }
+.billing-form { display:grid; gap:var(--space-4); }
+.billing-form__line-items { display:grid; gap:var(--space-3); }
+.billing-form__line-items > header,.billing-form__item > header { display:flex; align-items:start; justify-content:space-between; gap:var(--space-3); }
+.billing-form__line-items header p { margin-top:var(--space-1); color:var(--color-text-muted); font-size:var(--text-sm); }
+.billing-form__items { display:grid; gap:var(--space-3); }
+.billing-form__item { display:grid; grid-template-columns:1fr 1.5fr minmax(7rem,.5fr); gap:var(--space-3); padding:var(--space-3); border:var(--border-width) solid var(--color-border); border-radius:var(--radius-md); background:var(--color-surface-alt); }
+.billing-form__item > header { grid-column:1 / -1; }
+.billing-form__amount { align-self:end; margin:0; padding:calc(var(--space-2) + var(--border-width)) 0; color:var(--color-text); font-size:var(--text-sm); font-weight:var(--font-weight-semibold); white-space:nowrap; }
+.billing__summary--draft { border:var(--border-width) solid var(--color-primary); background:var(--color-primary-soft); padding:var(--space-3); border-radius:var(--radius-md); }
+.billing-form__actions { justify-content:flex-end; }
+.payment-form { display:grid; gap:var(--space-4); }
+.payment-form__context,.payment-detail__grid,.receipt-print__details { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--space-3) var(--space-4); margin:0; padding:var(--space-4); border-radius:var(--radius-md); background:var(--color-surface-muted); }
+.payment-form__context div,.payment-detail__grid div,.receipt-print__details div { min-width:0; }
+.payment-form__context dt,.payment-detail__grid dt,.receipt-print__details dt { color:var(--color-text-muted); font-size:var(--text-caption); }
+.payment-form__context dd,.payment-detail__grid dd,.receipt-print__details dd { margin:var(--space-1) 0 0; overflow-wrap:anywhere; font-size:var(--text-sm); font-weight:var(--font-weight-semibold); }
+.payment-form__context-empty { color:var(--color-text-muted); font-size:var(--text-sm); }
+.receipt-print { display:grid; gap:var(--space-5); max-width:48rem; margin:0 auto; }
+.receipt-print [data-print-only] { display:none; }
+.receipt-print__brand { display:flex; align-items:center; gap:var(--space-3); padding-bottom:var(--space-4); border-bottom:2px solid var(--color-primary); }
+.receipt-print__brand img { width:3.25rem; height:3.25rem; object-fit:contain; }.receipt-print__brand h1 { font-size:var(--text-section-title); }.receipt-print__brand p { color:var(--color-text-muted); font-size:var(--text-sm); }
+.receipt-print__title { display:flex; justify-content:space-between; gap:var(--space-3); align-items:baseline; }.receipt-print__title strong { color:var(--color-primary); }
+.receipt-print__context,.receipt-print__payment,.receipt-print__context > dl,.receipt-print__payment > dl,.receipt-print__amount { display:contents; }
+@media (max-width:62rem) { .billing-form__item { grid-template-columns:1fr 1fr; }.billing-form__amount { grid-column:1 / -1; padding:0; }.billing-workspace__metrics { grid-template-columns:1fr 1fr; }.outstanding-balances__metrics { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media (max-width:48rem) { .billing-workspace { gap:var(--space-4); }.billing-workspace__metrics,.outstanding-balances__metrics,.billing__summary,.billing-form__item,.payment-form__context,.payment-detail__grid,.receipt-print__details { grid-template-columns:1fr; }.billing__detail-heading,.billing-form__line-items > header { align-items:stretch; flex-direction:column; }.billing-form__line-items > header .button { width:100%; }.billing-form__actions { display:grid; grid-template-columns:1fr 1fr; }.billing-form__actions .button { width:100%; }.billing__item { gap:var(--space-2); flex-direction:column; }.billing__item > strong { text-align:left; }.receipt-print__title { align-items:stretch; flex-direction:column; } }

@@ -1,0 +1,70 @@
+import { element } from '../components/dom.js';
+import { createBadge, createButton, createCard, createField, createFilterBar, createKpiCard, createPageHeader, createSearch } from '../components/primitives.js';
+import { createPagination, createTable } from '../components/data-display.js';
+import { confirm, openDrawer, openModal, showToast } from '../components/overlays.js';
+import { state as appState } from '../core/state.js';
+import { dirtyState } from '../core/dirty-state.js';
+import { getActiveDentists, getActiveUsers, getUserManagementPermissions } from '../data/user-management.js';
+import { formatStatus } from '../utils/formatters.js';
+
+const PAGE_SIZE = 8;
+const DIRTY_SOURCE = 'user-management';
+const statusBadge = status => ({ label: formatStatus(status), variant: status === 'active' ? 'success' : 'neutral' });
+const roleFor = (state, code) => state.roles.find(role => role.code === code) || null;
+const roleLabel = (state, code) => roleFor(state, code)?.name || 'Unknown role';
+const userMatches = (user, term) => [user.id, user.fullName, user.email, user.phone].filter(Boolean).join(' ').toLocaleLowerCase().includes(term.toLocaleLowerCase());
+
+export const renderUsersWorkspace = ({ state, session }) => {
+  const permissions = getUserManagementPermissions({ state, actor: session });
+  if (!permissions.canView) return element('section', { className: 'empty-state' }, [element('h2', { text: 'Access Denied' }), element('p', { text: 'You do not have permission to manage user accounts.' })]);
+  let currentState = state, pageNumber = 1, overlay = null;
+  const filters = { search: '', roleCode: '', status: '' };
+  const page = element('section', { className: 'users-workspace' });
+  const region = element('div', { className: 'users-workspace__region', 'aria-live': 'polite' });
+  const metrics = element('div', { className: 'users-workspace__metrics' });
+  const results = element('div', { className: 'users-workspace__results', 'aria-live': 'polite' });
+  const records = () => [...currentState.users].filter(user => (!filters.search || userMatches(user, filters.search)) && (!filters.roleCode || user.roleCode === filters.roleCode) && (!filters.status || user.status === filters.status)).sort((a, b) => a.fullName.localeCompare(b.fullName));
+  const closeGuard = async () => dirtyState.isDirty(DIRTY_SOURCE) ? await confirm({ title: 'Discard user changes?', message: 'Your unsaved account changes will be discarded.', confirmLabel: 'Discard', variant: 'danger' }) : true;
+  const search = createSearch({ label: 'Search users by name, ID, email, or phone', placeholder: 'Search name, user ID, or email...', onInput: value => { filters.search = value.trim(); pageNumber = 1; renderResults(); } });
+  const searchInput = search.querySelector('input'), clearSearch = search.querySelector('[aria-label="Clear search"]');
+  const role = createField({ id: 'user-role-filter', label: 'Role', type: 'select', options: [{ value: '', label: 'All roles' }, ...currentState.roles.map(item => ({ value: item.code, label: item.name }))] });
+  const status = createField({ id: 'user-status-filter', label: 'Status', type: 'select', options: [{ value: '', label: 'All statuses' }, { value: 'active', label: 'Active' }, { value: 'inactive', label: 'Inactive' }] });
+  role.control.addEventListener('change', () => { filters.roleCode = role.control.value; pageNumber = 1; renderResults(); });
+  status.control.addEventListener('change', () => { filters.status = status.control.value; pageNumber = 1; renderResults(); });
+  const reset = () => { filters.search = ''; filters.roleCode = ''; filters.status = ''; pageNumber = 1; searchInput.value = ''; clearSearch.hidden = true; role.control.value = ''; status.control.value = ''; renderResults(); };
+  const card = createCard({ title: 'User Accounts', subtitle: 'User accounts shown. Role permissions are managed centrally.', content: element('div', { className: 'users-workspace__list' }, [createFilterBar({ children: [search, role.element, status.element], onReset: reset }), results]) });
+  const subtitle = card.querySelector('.card__subtitle');
+  const renderResults = () => {
+    const visibleRecords = records(), totalPages = Math.max(1, Math.ceil(visibleRecords.length / PAGE_SIZE)); pageNumber = Math.min(pageNumber, totalPages); const visible = visibleRecords.slice((pageNumber - 1) * PAGE_SIZE, pageNumber * PAGE_SIZE);
+    const rows = visible.map(user => ({ id: user.id, name: user.fullName, email: user.email, phone: user.phone || '—', role: roleLabel(currentState, user.roleCode), jobTitle: user.jobTitle || '—', status: statusBadge(user.status), actions: [{ label: 'View user details', icon: 'eye', onClick: () => openDetails(user) }, { label: 'Edit user', icon: 'pencil', onClick: () => openForm(user) }] }));
+    const table = createTable({ stickyHeader: true, columns: [{ label: 'User ID', key: 'id' }, { label: 'Name', key: 'name' }, { label: 'Email', key: 'email' }, { label: 'Phone', key: 'phone' }, { label: 'Role', key: 'role' }, { label: 'Job Title', key: 'jobTitle' }, { label: 'Status', key: 'status', type: 'badge' }, { label: 'Actions', key: 'actions', type: 'actions' }], rows, empty: { title: 'No users found', message: 'Try adjusting the search or filters.' } });
+    metrics.replaceChildren(createKpiCard({ label: 'Total Users', value: String(currentState.users.length), icon: 'users' }), createKpiCard({ label: 'Active Users', value: String(getActiveUsers(currentState).length), icon: 'user-check' }), createKpiCard({ label: 'Inactive Users', value: String(currentState.users.filter(user => user.status === 'inactive').length), icon: 'user-x' }), createKpiCard({ label: 'Active Dentists', value: String(getActiveDentists(currentState).length), icon: 'stethoscope' }));
+    subtitle.textContent = `${visibleRecords.length} account${visibleRecords.length === 1 ? '' : 's'} shown. Role permissions are managed centrally.`;
+    results.replaceChildren(table, createPagination({ page: pageNumber, totalPages, summary: `Showing ${visibleRecords.length ? (pageNumber - 1) * PAGE_SIZE + 1 : 0}–${Math.min(pageNumber * PAGE_SIZE, visibleRecords.length)} of ${visibleRecords.length}`, onChange: next => { pageNumber = next; renderResults(); } }));
+  };
+  const openDetails = user => {
+    const items = [['User ID', user.id], ['Full name', user.fullName], ['Email', user.email], ['Phone', user.phone || 'Not recorded'], ['Role', roleLabel(currentState, user.roleCode)], ['Job title', user.jobTitle || 'Not recorded'], ['Status', formatStatus(user.status)], ['Branch', currentState.branches.find(branch => branch.id === user.branchId)?.name || 'Not recorded']];
+    overlay = openDrawer({ title: `User ${user.id}`, content: element('dl', { className: 'users__details' }, items.flatMap(([label, value]) => [element('dt', { text: label }), element('dd', { text: value })])), footer: createButton({ label: 'Close', variant: 'secondary', onClick: () => overlay?.close() }), onClose: () => { overlay = null; } });
+  };
+  const openForm = existing => {
+    dirtyState.clearUnsavedChanges(DIRTY_SOURCE); let saving = false;
+    const initial = existing ? { fullName: existing.fullName, email: existing.email, phone: existing.phone || '', jobTitle: existing.jobTitle || '', roleCode: existing.roleCode, status: existing.status } : { fullName: '', email: '', phone: '', jobTitle: '', roleCode: '', status: 'active' };
+    const fullName = createField({ id: 'user-full-name', label: 'Full name', value: initial.fullName, required: true, autocomplete: 'name' });
+    const email = createField({ id: 'user-email', label: 'Email address', type: 'email', value: initial.email, required: true, autocomplete: 'email' });
+    const phone = createField({ id: 'user-phone', label: 'Phone', type: 'tel', value: initial.phone, autocomplete: 'tel' });
+    const jobTitle = createField({ id: 'user-job-title', label: 'Job title', value: initial.jobTitle });
+    const role = createField({ id: 'user-role', label: 'Role', type: 'select', options: [{ value: '', label: 'Select role' }, ...currentState.roles.map(item => ({ value: item.code, label: item.name }))], disabled: existing?.id === session.userId }); role.control.value = initial.roleCode;
+    const status = createField({ id: 'user-status', label: 'Account status', type: 'select', options: [{ value: 'active', label: 'Active' }, { value: 'inactive', label: 'Inactive' }], disabled: existing?.id === session.userId }); status.control.value = initial.status;
+    const formError = element('p', { className: 'users__form-error', role: 'alert', hidden: true });
+    const controls = { fullName, email, phone, jobTitle, roleCode: role, status };
+    const values = () => Object.fromEntries(Object.entries(controls).map(([key, field]) => [key, field.control.value]));
+    const syncDirty = () => dirtyState.setUnsavedChanges(JSON.stringify(values()) !== JSON.stringify(initial), DIRTY_SOURCE);
+    Object.values(controls).forEach(field => ['input', 'change'].forEach(event => field.control.addEventListener(event, syncDirty)));
+    const form = element('form', { className: 'users__form', onsubmit: event => { event.preventDefault(); save(); } }, [existing ? createField({ id: 'user-id', label: 'User ID', value: existing.id, readOnly: true }).element : null, fullName.element, email.element, phone.element, jobTitle.element, role.element, status.element, formError].filter(Boolean));
+    const showErrors = errors => { formError.hidden = false; formError.textContent = Object.values(errors).join(' '); Object.entries(controls).forEach(([key, field]) => field.control.setAttribute('aria-invalid', String(Boolean(errors[key])))); };
+    const save = () => { if (saving) return; saving = true; formError.hidden = true; try { const result = existing ? appState.updateUser({ userId: existing.id, values: values(), actor: session }) : appState.createUser({ values: values(), actor: session }); dirtyState.clearUnsavedChanges(DIRTY_SOURCE); overlay?.close(); overlay = null; currentState = appState.get(); renderResults(); showToast({ title: existing ? 'User account updated.' : 'User account created.', message: result.user.fullName, variant: 'success' }); } catch (error) { saving = false; showErrors(error.fieldErrors || { form: error.message }); } };
+    overlay = openModal({ title: existing ? `Edit User ${existing.id}` : 'Add User', content: form, footer: element('div', { className: 'button-group' }, [createButton({ label: 'Cancel', variant: 'secondary', onClick: () => overlay?.requestClose() }), createButton({ label: existing ? 'Save Changes' : 'Create User', type: 'submit', onClick: () => { if (form.isConnected) form.requestSubmit(); } })]), onRequestClose: closeGuard, onClose: () => { dirtyState.clearUnsavedChanges(DIRTY_SOURCE); overlay = null; } });
+  };
+  region.append(metrics, card);
+  page.append(createPageHeader({ title: 'Users & Staff', description: 'Manage staff accounts, roles, and account status. Permissions remain role-based.', actions: permissions.canManage ? [{ label: 'Add User', onClick: () => openForm(null) }] : [] }), region); renderResults(); return page;
+};

@@ -1,0 +1,33 @@
+# ==========================================
+# DentalApp - Git Ignore
+# ==========================================
+
+# Node dependencies
+node_modules/
+
+# Generated test / audit artifacts
+artifacts/
+tmp/
+output/pdf/
+test-results/
+playwright-report/
+blob-report/
+coverage/
+
+# Logs
+*.log
+debug.log
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / editor files
+.vscode/
+.idea/

@@ -1,0 +1,612 @@
+{
+  "status": "pass",
+  "playwright": "1.63.0",
+  "chromium": "153.0.8010.12",
+  "printMediaEmulation": true,
+  "pdfGeneration": "Playwright Chromium, A4, scale 1, browser headers/footers off",
+  "inventory": [
+    {
+      "surface": "Invoice",
+      "route": "#/billing/invoices",
+      "roles": [
+        "Clinic Administrator",
+        "Cashier"
+      ],
+      "trigger": "Print Invoice",
+      "layout": "dedicated",
+      "size": "A4",
+      "orientation": "portrait",
+      "privacy": "financial",
+      "status": "supported"
+    },
+    {
+      "surface": "Payment Receipt",
+      "route": "#/billing/receipts",
+      "roles": [
+        "Clinic Administrator",
+        "Cashier"
+      ],
+      "trigger": "Print Receipt",
+      "layout": "dedicated",
+      "size": "A4",
+      "orientation": "portrait",
+      "privacy": "financial",
+      "status": "supported"
+    },
+    {
+      "surface": "Prescription",
+      "route": "#/patients/:patient/prescriptions",
+      "roles": [
+        "Clinic Administrator",
+        "Dentist"
+      ],
+      "trigger": "Print Prescription",
+      "layout": "dedicated",
+      "size": "A4",
+      "orientation": "portrait",
+      "privacy": "clinical",
+      "status": "supported"
+    },
+    {
+      "surface": "Treatment Plan",
+      "route": "#/treatment-plans/:plan",
+      "roles": [
+        "Clinic Administrator",
+        "Dentist"
+      ],
+      "trigger": "Print Treatment Plan",
+      "layout": "dedicated",
+      "size": "A4",
+      "orientation": "portrait",
+      "privacy": "clinical",
+      "status": "supported"
+    },
+    {
+      "surface": "Dental Chart Summary",
+      "route": "#/patients/:patient/dental-chart",
+      "roles": [
+        "Clinic Administrator",
+        "Dentist"
+      ],
+      "trigger": "Print Dental Chart Summary",
+      "layout": "dedicated",
+      "size": "A4",
+      "orientation": "portrait",
+      "privacy": "clinical",
+      "status": "supported"
+    },
+    {
+      "surface": "Selected Reports",
+      "route": "#/reports",
+      "roles": [
+        "Clinic Administrator",
+        "Dentist",
+        "Receptionist",
+        "Cashier"
+      ],
+      "trigger": "Print Report",
+      "layout": "dedicated",
+      "size": "A4",
+      "orientation": "landscape",
+      "privacy": "role-scoped",
+      "status": "supported"
+    }
+  ],
+  "screenOnly": [
+    "Patients registry/profile",
+    "Appointments workspace",
+    "Waiting Room",
+    "Encounters workspace",
+    "Procedures register",
+    "Documents metadata",
+    "Users & Staff",
+    "Clinic Settings",
+    "Profile"
+  ],
+  "receipt": {
+    "canonical": "RCT-000807",
+    "pages": 1,
+    "methods": {
+      "Cash": {
+        "receipt": "RCT-000802",
+        "pages": 1,
+        "reference": "Not provided"
+      },
+      "Mobile Money": {
+        "receipt": "RCT-000801",
+        "pages": 1,
+        "reference": "DEMO-MM-701"
+      },
+      "Bank": {
+        "receipt": "RCT-000803",
+        "pages": 1,
+        "reference": "DEMO-BANK-703"
+      },
+      "Card": {
+        "receipt": "RCT-000807",
+        "pages": 1,
+        "reference": "DEMO-CARD-707"
+      }
+    },
+    "unsupportedMethodVariant": "Other - no canonical payment uses this method",
+    "longValues": "pass",
+    "zeroBalance": "UGX 0 preserved",
+    "partialBalance": "verified by Phase 19A canonical receipts"
+  },
+  "reports": {
+    "types": [
+      "appointments",
+      "patients",
+      "clinical",
+      "finance",
+      "recalls"
+    ],
+    "pages": {
+      "appointments": 2,
+      "patients": 2,
+      "clinical": 1,
+      "finance": 2,
+      "recalls": 1
+    },
+    "appointmentTotal": 9,
+    "workload": {
+      "Dr. Daniel Mugisha": 5,
+      "Dr. Sarah Nakanwagi": 4
+    },
+    "finance": {
+      "totalPayments": 2360000,
+      "outstanding": 420000,
+      "todayCollections": 360000,
+      "paymentsToday": 2
+    },
+    "outstanding": {
+      "Joseph": 300000,
+      "Amina": 70000,
+      "Samuel": 50000
+    },
+    "recalls": {
+      "upcoming": 1,
+      "overdue": 1,
+      "scheduled": 3
+    },
+    "empty": "professional one-page state"
+  },
+  "presentation": {
+    "clinicHeader": "pass",
+    "logo": "pass",
+    "a4": "pass",
+    "grayscale": "pass",
+    "backgroundGraphicsOff": "pass",
+    "backgroundGraphicsOn": "pass",
+    "tableHeaders": "repeat",
+    "blankPages": 0,
+    "clipping": 0,
+    "horizontalOverflow": 0
+  },
+  "security": {
+    "administrator": {
+      "reports": [
+        "patients",
+        "appointments",
+        "clinical",
+        "finance",
+        "recalls"
+      ],
+      "unauthorizedPrintDom": 0
+    },
+    "dentist": {
+      "reports": [
+        "patients",
+        "appointments",
+        "clinical",
+        "recalls"
+      ],
+      "unauthorizedPrintDom": 0
+    },
+    "receptionist": {
+      "reports": [
+        "patients",
+        "appointments",
+        "recalls"
+      ],
+      "unauthorizedPrintDom": 0
+    },
+    "cashier": {
+      "reports": [
+        "finance"
+      ],
+      "unauthorizedPrintDom": 0
+    }
+  },
+  "stateIntegrity": {
+    "exactBrowserSnapshot": "unchanged",
+    "dirtyRegistry": 0,
+    "printSideEffects": 0,
+    "duplicatePrintSideEffects": 0,
+    "validation": "pass"
+  },
+  "reset": {
+    "finance": {
+      "totalPayments": 2360000,
+      "outstanding": 420000,
+      "todayCollections": 360000,
+      "paymentsToday": 2
+    },
+    "appointments": 9,
+    "recalls": {
+      "upcoming": 1,
+      "overdue": 1,
+      "scheduled": 3
+    },
+    "validator": "pass"
+  },
+  "pdfs": [
+    {
+      "name": "invoice",
+      "pageCount": 1,
+      "orientation": "portrait",
+      "blankPages": 0,
+      "width": 594.96,
+      "height": 841.92,
+      "printBackground": false,
+      "keyText": "pass",
+      "layout": {
+        "width": 672.75,
+        "scrollWidth": 673,
+        "clientWidth": 673,
+        "chromeVisible": false,
+        "visibleButtons": 0,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "hidden": false
+        }
+      }
+    },
+    {
+      "name": "receipt-card",
+      "pageCount": 1,
+      "orientation": "portrait",
+      "blankPages": 0,
+      "width": 594.96,
+      "height": 841.92,
+      "printBackground": false,
+      "keyText": "pass",
+      "layout": {
+        "width": 672.75,
+        "scrollWidth": 673,
+        "clientWidth": 673,
+        "chromeVisible": false,
+        "visibleButtons": 0,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "hidden": false
+        }
+      }
+    },
+    {
+      "name": "receipt-cash",
+      "pageCount": 1,
+      "orientation": "portrait",
+      "blankPages": 0,
+      "width": 594.96,
+      "height": 841.92,
+      "printBackground": false,
+      "keyText": "pass",
+      "layout": {
+        "width": 672.75,
+        "scrollWidth": 673,
+        "clientWidth": 673,
+        "chromeVisible": false,
+        "visibleButtons": 0,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "hidden": false
+        }
+      }
+    },
+    {
+      "name": "receipt-mobile-money",
+      "pageCount": 1,
+      "orientation": "portrait",
+      "blankPages": 0,
+      "width": 594.96,
+      "height": 841.92,
+      "printBackground": false,
+      "keyText": "pass",
+      "layout": {
+        "width": 672.75,
+        "scrollWidth": 673,
+        "clientWidth": 673,
+        "chromeVisible": false,
+        "visibleButtons": 0,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "hidden": false
+        }
+      }
+    },
+    {
+      "name": "receipt-bank",
+      "pageCount": 1,
+      "orientation": "portrait",
+      "blankPages": 0,
+      "width": 594.96,
+      "height": 841.92,
+      "printBackground": false,
+      "keyText": "pass",
+      "layout": {
+        "width": 672.75,
+        "scrollWidth": 673,
+        "clientWidth": 673,
+        "chromeVisible": false,
+        "visibleButtons": 0,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "hidden": false
+        }
+      }
+    },
+    {
+      "name": "receipt-card",
+      "pageCount": 1,
+      "orientation": "portrait",
+      "blankPages": 0,
+      "width": 594.96,
+      "height": 841.92,
+      "printBackground": false,
+      "keyText": "pass",
+      "layout": {
+        "width": 672.75,
+        "scrollWidth": 673,
+        "clientWidth": 673,
+        "chromeVisible": false,
+        "visibleButtons": 0,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "hidden": false
+        }
+      }
+    },
+    {
+      "name": "receipt-long-values",
+      "pageCount": 1,
+      "orientation": "portrait",
+      "blankPages": 0,
+      "width": 594.96,
+      "height": 841.92,
+      "printBackground": false,
+      "keyText": "pass",
+      "layout": {
+        "width": 672.75,
+        "scrollWidth": 673,
+        "clientWidth": 673,
+        "chromeVisible": false,
+        "visibleButtons": 0,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "hidden": false
+        }
+      }
+    },
+    {
+      "name": "prescription",
+      "pageCount": 1,
+      "orientation": "portrait",
+      "blankPages": 0,
+      "width": 594.96,
+      "height": 841.92,
+      "printBackground": false,
+      "keyText": "pass",
+      "layout": {
+        "width": 672.75,
+        "scrollWidth": 673,
+        "clientWidth": 673,
+        "chromeVisible": false,
+        "visibleButtons": 0,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "hidden": false
+        }
+      }
+    },
+    {
+      "name": "treatment-plan",
+      "pageCount": 1,
+      "orientation": "portrait",
+      "blankPages": 0,
+      "width": 594.96,
+      "height": 841.92,
+      "printBackground": false,
+      "keyText": "pass",
+      "layout": {
+        "width": 672.75,
+        "scrollWidth": 673,
+        "clientWidth": 673,
+        "chromeVisible": false,
+        "visibleButtons": 0,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "hidden": false
+        }
+      }
+    },
+    {
+      "name": "dental-chart-summary",
+      "pageCount": 1,
+      "orientation": "portrait",
+      "blankPages": 0,
+      "width": 594.96,
+      "height": 841.92,
+      "printBackground": false,
+      "keyText": "pass",
+      "layout": {
+        "width": 672.75,
+        "scrollWidth": 673,
+        "clientWidth": 673,
+        "chromeVisible": false,
+        "visibleButtons": 0,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "hidden": false
+        }
+      }
+    },
+    {
+      "name": "report-appointments",
+      "pageCount": 2,
+      "orientation": "landscape",
+      "blankPages": 0,
+      "width": 841.92,
+      "height": 594.96,
+      "printBackground": false,
+      "keyText": "pass",
+      "layout": {
+        "width": 1016.6875,
+        "scrollWidth": 1017,
+        "clientWidth": 1017,
+        "chromeVisible": false,
+        "visibleButtons": 0,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "hidden": false
+        }
+      }
+    },
+    {
+      "name": "report-patients",
+      "pageCount": 2,
+      "orientation": "landscape",
+      "blankPages": 0,
+      "width": 841.92,
+      "height": 594.96,
+      "printBackground": false,
+      "keyText": "pass",
+      "layout": {
+        "width": 1016.6875,
+        "scrollWidth": 1017,
+        "clientWidth": 1017,
+        "chromeVisible": false,
+        "visibleButtons": 0,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "hidden": false
+        }
+      }
+    },
+    {
+      "name": "report-clinical",
+      "pageCount": 1,
+      "orientation": "landscape",
+      "blankPages": 0,
+      "width": 841.92,
+      "height": 594.96,
+      "printBackground": false,
+      "keyText": "pass",
+      "layout": {
+        "width": 1016.6875,
+        "scrollWidth": 1017,
+        "clientWidth": 1017,
+        "chromeVisible": false,
+        "visibleButtons": 0,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "hidden": false
+        }
+      }
+    },
+    {
+      "name": "report-finance",
+      "pageCount": 2,
+      "orientation": "landscape",
+      "blankPages": 0,
+      "width": 841.92,
+      "height": 594.96,
+      "printBackground": true,
+      "keyText": "pass",
+      "layout": {
+        "width": 1016.6875,
+        "scrollWidth": 1017,
+        "clientWidth": 1017,
+        "chromeVisible": false,
+        "visibleButtons": 0,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "hidden": false
+        }
+      }
+    },
+    {
+      "name": "report-recalls",
+      "pageCount": 1,
+      "orientation": "landscape",
+      "blankPages": 0,
+      "width": 841.92,
+      "height": 594.96,
+      "printBackground": false,
+      "keyText": "pass",
+      "layout": {
+        "width": 1016.6875,
+        "scrollWidth": 1017,
+        "clientWidth": 1017,
+        "chromeVisible": false,
+        "visibleButtons": 0,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "hidden": false
+        }
+      }
+    },
+    {
+      "name": "report-empty",
+      "pageCount": 1,
+      "orientation": "landscape",
+      "blankPages": 0,
+      "width": 841.92,
+      "height": 594.96,
+      "printBackground": false,
+      "keyText": "pass",
+      "layout": {
+        "width": 1016.6875,
+        "scrollWidth": 1017,
+        "clientWidth": 1017,
+        "chromeVisible": false,
+        "visibleButtons": 0,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "hidden": false
+        }
+      }
+    }
+  ],
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "missingAssets": [],
+    "unexpectedApiRequests": []
+  },
+  "architecture": {
+    "backendPdf": false,
+    "newPdfDependency": false,
+    "businessLogicChanged": false,
+    "permissionsChanged": false,
+    "undocumentedPrintSurfaces": false
+  }
+}

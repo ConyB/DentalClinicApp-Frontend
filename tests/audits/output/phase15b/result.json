@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "runtimePayment": "PAY-000708",
+  "runtimeReceipt": "RCT-000808",
+  "settlement": "Amina INV-000602 fully paid",
+  "roles": "cashier allowed; dentist/receptionist denied",
+  "integrity": "pass",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

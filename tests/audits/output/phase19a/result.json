@@ -1,0 +1,306 @@
+{
+  "status": "pass",
+  "playwright": "1.63.0",
+  "browser": "153.0.8010.12",
+  "page": {
+    "size": "A4",
+    "orientation": "portrait",
+    "scale": 1,
+    "pages": 1,
+    "printBackground": false
+  },
+  "canonical": {
+    "receipt": "RCT-000807",
+    "patient": "Sharon Apio",
+    "patientId": "PAT-000011",
+    "invoice": "INV-000606",
+    "amount": 180000,
+    "method": "Card",
+    "reference": "DEMO-CARD-707",
+    "receivedBy": "Brian Ssemanda",
+    "date": "21 Sept 2026 - 10:02",
+    "remainingBalance": 0
+  },
+  "checks": [
+    {
+      "receipt": "RCT-000807",
+      "method": "Card",
+      "balance": 0,
+      "pdf": {
+        "pages": 1,
+        "widthPoints": 594.95996,
+        "heightPoints": 841.91998
+      },
+      "layout": {
+        "width": 672.75,
+        "height": 553.828125,
+        "scrollWidth": 673,
+        "clientWidth": 673,
+        "brand": {
+          "top": 28.453125,
+          "bottom": 97.109375,
+          "left": 373.078125,
+          "right": 712.09375,
+          "width": 339.015625,
+          "height": 68.65625
+        },
+        "identity": {
+          "top": 28.453125,
+          "bottom": 97.109375,
+          "left": 742.328125,
+          "right": 992.921875,
+          "width": 250.59375,
+          "height": 68.65625
+        },
+        "context": {
+          "top": 158.578125,
+          "bottom": 227.59375,
+          "left": 373.078125,
+          "right": 992.921875,
+          "width": 619.84375,
+          "height": 69.015625
+        },
+        "amount": {
+          "top": 254.046875,
+          "bottom": 362.71875,
+          "left": 373.078125,
+          "right": 992.921875,
+          "width": 619.84375,
+          "height": 108.671875
+        },
+        "payment": {
+          "top": 389.171875,
+          "bottom": 522.609375,
+          "left": 373.078125,
+          "right": 992.921875,
+          "width": 619.84375,
+          "height": 133.4375
+        },
+        "amountFont": 34.6667,
+        "normalFont": 14.6667,
+        "amountBorder": "1px",
+        "appChromeVisible": false,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254
+        }
+      }
+    },
+    {
+      "receipt": "RCT-000802",
+      "method": "Cash",
+      "balance": 70000,
+      "pdf": {
+        "pages": 1,
+        "widthPoints": 594.95996,
+        "heightPoints": 841.91998
+      },
+      "layout": {
+        "width": 672.75,
+        "height": 553.828125,
+        "scrollWidth": 673,
+        "clientWidth": 673,
+        "brand": {
+          "top": 28.453125,
+          "bottom": 97.109375,
+          "left": 373.078125,
+          "right": 712.09375,
+          "width": 339.015625,
+          "height": 68.65625
+        },
+        "identity": {
+          "top": 28.453125,
+          "bottom": 97.109375,
+          "left": 742.328125,
+          "right": 992.921875,
+          "width": 250.59375,
+          "height": 68.65625
+        },
+        "context": {
+          "top": 158.578125,
+          "bottom": 227.59375,
+          "left": 373.078125,
+          "right": 992.921875,
+          "width": 619.84375,
+          "height": 69.015625
+        },
+        "amount": {
+          "top": 254.046875,
+          "bottom": 362.71875,
+          "left": 373.078125,
+          "right": 992.921875,
+          "width": 619.84375,
+          "height": 108.671875
+        },
+        "payment": {
+          "top": 389.171875,
+          "bottom": 522.609375,
+          "left": 373.078125,
+          "right": 992.921875,
+          "width": 619.84375,
+          "height": 133.4375
+        },
+        "amountFont": 34.6667,
+        "normalFont": 14.6667,
+        "amountBorder": "1px",
+        "appChromeVisible": false,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254
+        }
+      }
+    },
+    {
+      "receipt": "RCT-000806",
+      "method": "Mobile Money",
+      "balance": 300000,
+      "pdf": {
+        "pages": 1,
+        "widthPoints": 594.95996,
+        "heightPoints": 841.91998
+      },
+      "layout": {
+        "width": 672.75,
+        "height": 553.828125,
+        "scrollWidth": 673,
+        "clientWidth": 673,
+        "brand": {
+          "top": 28.453125,
+          "bottom": 97.109375,
+          "left": 373.078125,
+          "right": 712.09375,
+          "width": 339.015625,
+          "height": 68.65625
+        },
+        "identity": {
+          "top": 28.453125,
+          "bottom": 97.109375,
+          "left": 742.328125,
+          "right": 992.921875,
+          "width": 250.59375,
+          "height": 68.65625
+        },
+        "context": {
+          "top": 158.578125,
+          "bottom": 227.59375,
+          "left": 373.078125,
+          "right": 992.921875,
+          "width": 619.84375,
+          "height": 69.015625
+        },
+        "amount": {
+          "top": 254.046875,
+          "bottom": 362.71875,
+          "left": 373.078125,
+          "right": 992.921875,
+          "width": 619.84375,
+          "height": 108.671875
+        },
+        "payment": {
+          "top": 389.171875,
+          "bottom": 522.609375,
+          "left": 373.078125,
+          "right": 992.921875,
+          "width": 619.84375,
+          "height": 133.4375
+        },
+        "amountFont": 34.6667,
+        "normalFont": 14.6667,
+        "amountBorder": "1px",
+        "appChromeVisible": false,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254
+        }
+      }
+    },
+    {
+      "receipt": "temporary long-value stress",
+      "result": "pass",
+      "layout": {
+        "width": 672.75,
+        "height": 909.546875,
+        "scrollWidth": 673,
+        "clientWidth": 673,
+        "brand": {
+          "top": 28.453125,
+          "bottom": 97.109375,
+          "left": 373.078125,
+          "right": 712.09375,
+          "width": 339.015625,
+          "height": 68.65625
+        },
+        "identity": {
+          "top": 28.453125,
+          "bottom": 97.109375,
+          "left": 742.328125,
+          "right": 992.921875,
+          "width": 250.59375,
+          "height": 68.65625
+        },
+        "context": {
+          "top": 158.578125,
+          "bottom": 355.1875,
+          "left": 373.078125,
+          "right": 992.921875,
+          "width": 619.84375,
+          "height": 196.609375
+        },
+        "amount": {
+          "top": 381.640625,
+          "bottom": 490.3125,
+          "left": 373.078125,
+          "right": 992.921875,
+          "width": 619.84375,
+          "height": 108.671875
+        },
+        "payment": {
+          "top": 516.765625,
+          "bottom": 878.328125,
+          "left": 373.078125,
+          "right": 992.921875,
+          "width": 619.84375,
+          "height": 361.5625
+        },
+        "amountFont": 34.6667,
+        "normalFont": 14.6667,
+        "amountBorder": "1px",
+        "appChromeVisible": false,
+        "logo": {
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254
+        }
+      }
+    },
+    {
+      "receipt": "logo failure fallback",
+      "result": "pass",
+      "layout": {
+        "brandWidth": 339.015625,
+        "titleWidth": 248.359375,
+        "titleHeight": 24,
+        "overflow": 0
+      }
+    }
+  ],
+  "reset": {
+    "validator": "pass",
+    "totalPayments": 2360000,
+    "outstanding": 420000,
+    "todayCollections": 360000,
+    "paymentsToday": 2
+  },
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "missingAssets": [],
+    "apiRequests": []
+  },
+  "pdf": "output\\pdf\\phase19a-payment-receipt.pdf"
+}

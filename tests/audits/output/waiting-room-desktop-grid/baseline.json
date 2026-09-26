@@ -1,0 +1,69 @@
+{
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "content": {
+    "x": 292,
+    "y": 96,
+    "width": 1116,
+    "height": 781.015625
+  },
+  "workspace": {
+    "x": 292,
+    "y": 337.171875,
+    "width": 1116,
+    "height": 539.84375
+  },
+  "waiting": {
+    "x": 292,
+    "y": 337.171875,
+    "width": 701.4375,
+    "height": 313.9375
+  },
+  "arrivals": {
+    "x": 1013.4375,
+    "y": 337.171875,
+    "width": 394.5625,
+    "height": 319.9375
+  },
+  "treatment": {
+    "x": 292,
+    "y": 667.109375,
+    "width": 701.4375,
+    "height": 209.90625
+  },
+  "row": {
+    "x": 313,
+    "y": 768.046875,
+    "width": 659.4375,
+    "height": 87.96875
+  },
+  "status": {
+    "x": 785,
+    "y": 800.03125,
+    "width": 87.09375,
+    "height": 24
+  },
+  "action": {
+    "x": 826.09375,
+    "y": 794.03125,
+    "width": 178,
+    "height": 36
+  },
+  "gap": -46,
+  "sameLine": true,
+  "sameActionParent": false,
+  "intersection": true,
+  "contained": false,
+  "noOverflow": true,
+  "workspaceStyle": {
+    "display": "grid",
+    "gridTemplateColumns": "701.438px 394.562px",
+    "gap": "20px"
+  },
+  "treatmentStyle": {
+    "gridColumnStart": "auto",
+    "gridColumnEnd": "auto"
+  }
+}

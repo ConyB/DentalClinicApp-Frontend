@@ -1,0 +1,42 @@
+{
+  "status": "pass",
+  "chromium": "available",
+  "playwright": "available",
+  "canonicalProcedures": "pass",
+  "samuelFulfilment": "pass",
+  "aminaRuntimeProcedure": {
+    "status": "pass",
+    "id": "PROC-000405",
+    "completedBefore": 0,
+    "completedAfter": 120000,
+    "persisted": true
+  },
+  "eligibilityAndValidation": "pass",
+  "doubleSubmit": "pass",
+  "dirtyState": "pass",
+  "roleMatrixAndSessionLeakage": "pass",
+  "dialogAndAccessibility": "pass",
+  "responsive": "1440×900, 1366×768, 1280×720, 1024×768, 390×844 pass",
+  "waitingRoomRegression": "pass",
+  "runtimeIntegrity": {
+    "uniqueProcedureIds": true,
+    "countDelta": 1,
+    "validPatientRefs": true,
+    "validServiceRefs": true,
+    "validDentistRefs": true,
+    "validEncounterRefs": true,
+    "validPlanItemRefs": true,
+    "validToothRefs": true,
+    "validSurfaceRefs": true,
+    "duplicateFulfilment": 0
+  },
+  "resetAndRegressions": "pass",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

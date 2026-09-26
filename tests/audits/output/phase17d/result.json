@@ -1,0 +1,96 @@
+{
+  "status": "pass",
+  "sweep": {
+    "Clinic Administrator": [
+      "dashboard",
+      "patients",
+      "appointments",
+      "waiting-room",
+      "clinical/encounters",
+      "treatment-plans",
+      "procedures",
+      "billing/invoices",
+      "billing/payments",
+      "billing/receipts",
+      "outstanding-balances",
+      "recalls",
+      "reports",
+      "users",
+      "clinic-settings",
+      "profile"
+    ],
+    "Dentist (Daniel)": [
+      "dashboard",
+      "appointments",
+      "waiting-room",
+      "patients",
+      "clinical/encounters",
+      "clinical/dental-chart",
+      "treatment-plans",
+      "procedures",
+      "prescriptions",
+      "recalls",
+      "reports",
+      "clinic-settings",
+      "profile"
+    ],
+    "Dentist (Sarah)": [
+      "dashboard",
+      "appointments",
+      "waiting-room",
+      "patients",
+      "clinical/encounters",
+      "clinical/dental-chart",
+      "treatment-plans",
+      "procedures",
+      "prescriptions",
+      "recalls",
+      "reports",
+      "clinic-settings",
+      "profile"
+    ],
+    "Receptionist": [
+      "dashboard",
+      "patients",
+      "appointments",
+      "waiting-room",
+      "recalls",
+      "reports",
+      "clinic-settings",
+      "profile"
+    ],
+    "Cashier": [
+      "dashboard",
+      "patients",
+      "billing/invoices",
+      "billing/payments",
+      "billing/receipts",
+      "outstanding-balances",
+      "reports",
+      "clinic-settings",
+      "profile"
+    ]
+  },
+  "iconography": "semantic sidebar and account-menu mappings verified",
+  "sidebar": "independently scrollable with thin scrollbar and branch footer",
+  "shellFallback": {
+    "validRoutes": "pass",
+    "invalidRoute": "Page Not Found without stale profile data",
+    "missingRenderer": "Workspace unavailable with explicit diagnostic"
+  },
+  "responsive": [
+    "1440x900",
+    "1366x768",
+    "1280x720",
+    "1024x768",
+    "390x844"
+  ],
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "missingAssets": [],
+    "apiRequests": []
+  }
+}

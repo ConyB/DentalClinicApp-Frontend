@@ -1,0 +1,18 @@
+.recalls-workspace,.recalls-workspace__region,.recalls-workspace__list,.recalls-workspace__results { display:grid; min-width:0; gap:var(--space-4); }
+.recalls-workspace { width:min(100%,var(--content-max-width)); margin:0 auto; gap:var(--space-5); }
+.recalls-workspace .card,.recalls-workspace .card__body { min-width:0; }
+.recalls-workspace__metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--space-4); }
+.recall-form { display:grid; gap:var(--space-4); }
+.recall-form__grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--space-3); }
+.recall-form__error { margin:0; padding:var(--space-3); border-radius:var(--radius-md); background:var(--color-danger-soft); color:var(--color-danger); font-size:var(--text-sm); }
+.recall-detail { display:grid; gap:var(--space-4); min-width:0; }
+.recall-detail__heading { display:flex; align-items:center; justify-content:space-between; gap:var(--space-3); }
+.recall-detail__heading p { margin:0; }
+.recall-detail__grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--space-3) var(--space-4); margin:0; padding:var(--space-4); border-radius:var(--radius-md); background:var(--color-surface-muted); }
+.recall-detail__grid div { min-width:0; }
+.recall-detail__grid dt { color:var(--color-text-muted); font-size:var(--text-caption); }
+.recall-detail__grid dd { margin:var(--space-1) 0 0; font-size:var(--text-sm); font-weight:var(--font-weight-semibold); overflow-wrap:anywhere; white-space:pre-wrap; }
+.recall-detail__appointment { display:grid; gap:var(--space-2); }
+.recall-detail__appointment span { color:var(--color-text-muted); font-size:var(--text-sm); overflow-wrap:anywhere; }
+.recall-detail__actions { justify-content:flex-end; }
+@media (max-width:48rem) { .recalls-workspace { gap:var(--space-4); }.recalls-workspace__metrics,.recall-form__grid,.recall-detail__grid { grid-template-columns:1fr; }.recall-detail__heading { align-items:flex-start; flex-direction:column; }.recall-detail__actions { display:grid; grid-template-columns:1fr; }.recall-detail__actions .button { width:100%; } }

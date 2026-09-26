@@ -1,0 +1,144 @@
+{
+  "status": "pass",
+  "inventory": [
+    {
+      "module": "patients",
+      "route": "patients",
+      "placeholder": "Search name, ID, or phone…",
+      "toolbar": "shared filter bar"
+    },
+    {
+      "module": "appointments",
+      "route": "appointments",
+      "placeholder": "Search patient or appointment…",
+      "toolbar": "custom appointment flex toolbar"
+    },
+    {
+      "module": "encounters",
+      "route": "clinical/encounters",
+      "placeholder": "Search patient or encounter…",
+      "toolbar": "shared filter bar"
+    },
+    {
+      "module": "invoices",
+      "route": "billing/invoices",
+      "placeholder": "Search invoice or patient…",
+      "toolbar": "shared filter bar"
+    },
+    {
+      "module": "payments",
+      "route": "billing/payments",
+      "placeholder": "Search payment or invoice…",
+      "toolbar": "shared filter bar"
+    },
+    {
+      "module": "outstanding-balances",
+      "route": "outstanding-balances",
+      "placeholder": "Search invoice or patient…",
+      "toolbar": "shared filter bar"
+    },
+    {
+      "module": "recalls",
+      "route": "recalls",
+      "placeholder": "Search patient or recall…",
+      "toolbar": "shared filter bar"
+    },
+    {
+      "module": "users",
+      "route": "users",
+      "placeholder": "Search name, user ID, or email...",
+      "toolbar": "shared filter bar"
+    },
+    {
+      "module": "waiting-room",
+      "route": "waiting-room check-in modal",
+      "placeholder": "Search patient or appointment…",
+      "toolbar": "modal search"
+    }
+  ],
+  "functional": {
+    "patients": "pass",
+    "appointments": "pass",
+    "encounters": "pass",
+    "invoices": "pass",
+    "payments": "pass",
+    "outstanding-balances": "pass",
+    "recalls": "pass",
+    "users": "pass"
+  },
+  "responsive": {
+    "1440x900": {
+      "patients": 373,
+      "appointments": 380,
+      "encounters": 357,
+      "invoices": 460,
+      "payments": 632,
+      "outstanding-balances": 460,
+      "recalls": 632,
+      "users": 462
+    },
+    "1366x768": {
+      "patients": 344,
+      "appointments": 350,
+      "encounters": 327,
+      "invoices": 423,
+      "payments": 582,
+      "outstanding-balances": 423,
+      "recalls": 582,
+      "users": 426
+    },
+    "1280x720": {
+      "patients": 309,
+      "appointments": 359,
+      "encounters": 380,
+      "invoices": 380,
+      "payments": 525,
+      "outstanding-balances": 380,
+      "recalls": 525,
+      "users": 385
+    },
+    "1024x768": {
+      "patients": 382,
+      "appointments": 666,
+      "encounters": 560,
+      "invoices": 560,
+      "payments": 560,
+      "outstanding-balances": 560,
+      "recalls": 560,
+      "users": 632
+    },
+    "390x844": {
+      "patients": 332,
+      "appointments": 332,
+      "encounters": 290,
+      "invoices": 290,
+      "payments": 290,
+      "outstanding-balances": 290,
+      "recalls": 290,
+      "users": 298
+    }
+  },
+  "waitingRoom": {
+    "1366x768": 566,
+    "390x844": 324
+  },
+  "globalHeader": {
+    "changed": "shared input type/ARIA semantics only; mounted behavior and layout unchanged",
+    "width": 448,
+    "placeholder": "Search patient by name, number or phone…"
+  },
+  "pagination": "pass",
+  "dirtyState": "clean",
+  "businessStateMutation": "none",
+  "shell": "pass",
+  "loginAndForms": "pass",
+  "reset": "canonical",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

@@ -1,0 +1,22 @@
+import { createCanonicalDemoState } from '../assets/js/data/demo.js';
+import { validateCanonicalDemoState, validateRuntimeState } from '../assets/js/data/integrity.js';
+import { createUser, getActiveDentists, getActiveUsers, updateUser } from '../assets/js/data/user-management.js';
+
+const assert = (value, message) => { if (!value) throw new Error(message); };
+const canonical = createCanonicalDemoState(), actor = { role: 'Clinic Administrator', userId: 'U001', branchId: 'BR-MAIN' };
+const businessSnapshot = () => JSON.stringify({ appointments: canonical.appointments, queue: canonical.queueEntries, encounters: canonical.clinicalEncounters, procedures: canonical.proceduresPerformed, invoices: canonical.invoices, payments: canonical.payments, receipts: canonical.receipts, recalls: canonical.recalls });
+assert(validateCanonicalDemoState(canonical).valid, 'Canonical state is invalid before user management.');
+assert(canonical.users.length === 6 && getActiveUsers(canonical).length === 5 && canonical.users.filter(user => user.status === 'inactive').length === 1 && getActiveDentists(canonical).length === 2, 'Canonical user counts do not reconcile.');
+assert(canonical.users.find(user => user.id === 'U006')?.fullName === 'Miriam Achieng' && canonical.users.find(user => user.id === 'U006')?.roleCode === 'receptionist' && canonical.users.find(user => user.id === 'U006')?.status === 'inactive', 'Miriam canonical account is inconsistent.');
+const beforeInvalid = JSON.stringify(canonical);
+for (const values of [{ fullName: '   ', email: 'bad', roleCode: 'dentist', status: 'active' }, { fullName: 'Invalid Role', email: 'invalid.role@pearlsmiledental.test', roleCode: 'platform_admin', status: 'active' }, { fullName: 'Invalid Status', email: 'invalid.status@pearlsmiledental.test', roleCode: 'cashier', status: 'locked' }, { fullName: 'Duplicate Login', email: 'grace.admin@pearlsmiledental.test', roleCode: 'cashier', status: 'active' }]) { let failed = false; try { createUser({ state: canonical, values, actor }); } catch { failed = true; } assert(failed, 'Invalid user creation was accepted.'); }
+assert(JSON.stringify(canonical) === beforeInvalid, 'Invalid user creation was not atomic.');
+const beforeBusiness = businessSnapshot();
+const created = createUser({ state: canonical, values: { fullName: 'Alex Kato', email: 'alex.kato@pearlsmiledental.test', phone: '+256 700 888 777', jobTitle: 'Front Desk Officer', roleCode: 'receptionist', status: 'active' }, actor });
+assert(created.user.id === 'U007' && created.user.roleId === 'ROLE-RECEPTIONIST' && canonical.users.length === 7 && canonical.auditLogs.filter(event => event.entityId === 'U007' && event.actionCode === 'USER_CREATED').length === 1, 'Valid user creation did not produce one account and audit event.');
+let duplicate = false; try { createUser({ state: canonical, values: { fullName: 'Alex Kato', email: 'alex.kato@pearlsmiledental.test', roleCode: 'cashier', status: 'active' }, actor }); } catch { duplicate = true; } assert(duplicate && canonical.users.length === 7, 'Duplicate create was not rejected atomically.');
+const updated = updateUser({ state: canonical, userId: 'U007', values: { fullName: 'Alex Kato', email: 'alex.kato@pearlsmiledental.test', phone: '+256 700 888 777', jobTitle: 'Cashier', roleCode: 'cashier', status: 'inactive' }, actor });
+assert(updated.changed && updated.user.roleId === 'ROLE-CASHIER' && updated.user.status === 'inactive' && canonical.auditLogs.filter(event => event.entityId === 'U007' && event.actionCode === 'USER_UPDATED').length === 1, 'User edit, role change, status change, or audit event failed.');
+let selfRoleBlocked = false; try { updateUser({ state: canonical, userId: 'U001', values: { fullName: 'Grace Namutebi', email: 'grace.admin@pearlsmiledental.test', phone: '+256 700 555 101', jobTitle: 'Practice Administrator', roleCode: 'cashier', status: 'active' }, actor }); } catch { selfRoleBlocked = true; } assert(selfRoleBlocked, 'Current user role change was not blocked.');
+assert(businessSnapshot() === beforeBusiness && validateRuntimeState(canonical).valid, 'User management mutated business records or broke runtime integrity.');
+console.log(JSON.stringify({ status: 'pass', canonical: { total: 6, active: 5, inactive: 1, dentists: 2 }, created: created.user.id, lifecycle: 'create/edit/role/status', audit: 'one event per successful mutation', integrity: 'pass' }, null, 2));

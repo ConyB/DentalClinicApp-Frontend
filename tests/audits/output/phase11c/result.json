@@ -1,0 +1,43 @@
+{
+  "status": "pass",
+  "canonicalValidation": {
+    "valid": true,
+    "errors": []
+  },
+  "checks": {
+    "canonicalClinicalData": "pass",
+    "canonicalQueueAndFinance": "pass",
+    "currentHistoricalAndStalePhi": "pass",
+    "rolePrivacyAndSessionLeak": "pass",
+    "invalidClinicalRoutes": "pass",
+    "dirtyNavigationMatrix": "pass",
+    "responsiveAccessibilityEncoding": "pass",
+    "finalResetAndIntegrity": "pass"
+  },
+  "baseline": {
+    "clinicalEncounters": 4,
+    "medicalHistoryRecords": 7,
+    "activeQueue": 2,
+    "totalPayments": 2360000,
+    "outstanding": 420000,
+    "todayCollections": 360000,
+    "paymentsToday": 2,
+    "downstreamCounts": {
+      "dentalChartEntries": 31,
+      "treatmentPlans": 4,
+      "proceduresPerformed": 4,
+      "prescriptions": 1,
+      "invoices": 6,
+      "payments": 7,
+      "receipts": 7
+    }
+  },
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

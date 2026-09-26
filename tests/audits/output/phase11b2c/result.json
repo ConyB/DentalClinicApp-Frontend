@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "canonicalValidation": {
+    "valid": true,
+    "errors": []
+  },
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

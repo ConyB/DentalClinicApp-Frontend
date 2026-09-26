@@ -1,0 +1,7 @@
+.procedure-history { display:grid; min-width:0; width:min(100%,var(--content-max-width)); gap:var(--space-5); margin:0 auto; }
+.procedure-history > .card,.procedure-history .card__body,.procedure-history .table-wrap { min-width:0; }
+.procedure-history__details { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--space-3) var(--space-5); margin:0; }
+.procedure-history__details div { min-width:0; }
+.procedure-history__details dt { color:var(--color-text-muted); font-size:var(--text-caption); }
+.procedure-history__details dd { margin:var(--space-1) 0 0; overflow-wrap:anywhere; white-space:pre-wrap; font-size:var(--text-sm); }
+@media (max-width:48rem) { .procedure-history { gap:var(--space-4); }.procedure-history__details { grid-template-columns:1fr; } }

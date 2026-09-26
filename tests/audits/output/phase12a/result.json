@@ -1,0 +1,60 @@
+{
+  "status": "pass",
+  "chartIntegrity": {
+    "valid": true,
+    "errors": [],
+    "summary": {
+      "permanent": 32,
+      "primary": 20,
+      "total": 52,
+      "duplicateCodes": 0
+    }
+  },
+  "canonicalIntegrity": {
+    "valid": true,
+    "errors": []
+  },
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "width": 1366,
+      "height": 768
+    },
+    {
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "roles": [
+    "Clinic Administrator",
+    "Dr. Daniel",
+    "Dr. Sarah",
+    "Receptionist",
+    "Cashier"
+  ],
+  "canonicalPatients": [
+    "Amina",
+    "Peter",
+    "Joan",
+    "Samuel",
+    "Esther",
+    "Isaac",
+    "Joseph",
+    "Mercy"
+  ],
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

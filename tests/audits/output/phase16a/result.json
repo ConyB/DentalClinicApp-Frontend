@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "runtimeRecall": "REC-000906",
+  "appointmentLink": "APT-000107",
+  "canonical": "five recalls reconciled",
+  "responsive": "1440/1366/1280/1024/390",
+  "cashier": "denied without PHI",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

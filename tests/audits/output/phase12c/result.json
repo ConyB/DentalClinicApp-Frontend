@@ -1,0 +1,40 @@
+{
+  "status": "pass",
+  "staticIntegrity": {
+    "valid": true,
+    "errors": [],
+    "summary": {
+      "permanent": 32,
+      "primary": 20,
+      "total": 52,
+      "duplicateCodes": 0
+    }
+  },
+  "phase5Integrity": {
+    "valid": true,
+    "errors": []
+  },
+  "conditions": 18,
+  "runtimePermanentId": "CHART-032",
+  "runtimePrimaryId": "CHART-033",
+  "normalizedSurfaces": {
+    "MO": "MO",
+    "DO": "DO",
+    "MOD": "MOD"
+  },
+  "patientSwitchSequence": [
+    "P001",
+    "P013",
+    "P002",
+    "P001"
+  ],
+  "roleSessionLeakage": "pass",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

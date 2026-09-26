@@ -1,0 +1,34 @@
+{
+  "status": "pass",
+  "browser": "Chromium via Playwright 1.63.0",
+  "canonicalDocuments": "Amina, Peter pre/post RCT, and Esther pass",
+  "schemaProtection": "no Procedure/Tooth relationship; X_RAY and CLINICAL_PHOTO only",
+  "routingAndPrivacy": "pass",
+  "filtersAndSelection": "pass",
+  "runtimeCreate": {
+    "id": "DOC-005",
+    "patientId": "P001",
+    "type": "CLINICAL_PHOTO",
+    "mimeType": "image/png",
+    "fileSizeBytes": 157,
+    "before": 4,
+    "after": 5
+  },
+  "persistence": "metadata only; same-session blob preview; unavailable fallback after refresh",
+  "temporaryPreviewLifecycle": "select, replace, discard, save, and reset pass",
+  "dirtyState": "navigation, patient switch, logout, and six-source coexistence pass",
+  "roleSecurity": "Administrator read-only; both Dentists create; Receptionist/Cashier denied",
+  "responsive": "1440x900, 1366x768, 1280x720, 1024x768, 390x844 pass",
+  "waitingRoomRegression": "pass",
+  "runtimeIntegrityAndReset": "pass",
+  "screenshots": "E:\\DentalApp\\tests\\audits\\output\\phase14b2",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": [],
+    "uploadRequests": []
+  }
+}

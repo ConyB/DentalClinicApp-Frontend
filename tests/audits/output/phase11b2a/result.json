@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": []
+  }
+}

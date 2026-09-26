@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "canonical": "appointments 9; workload 5/4; payments UGX 2,360,000; outstanding UGX 420,000; today UGX 360,000; recalls 1/1/3",
+  "artifact": "no invalid visible text or direct Reports text nodes",
+  "emptyFilter": "clean zero-row state",
+  "readOnly": "state and dirty sources unchanged",
+  "csv": "finance export verified",
+  "print": "print action and report print layout available",
+  "responsive": "1440/1366/1280/1024/390",
+  "roles": "administrator/dentist/receptionist/cashier scoped",
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "failedRequests": [],
+    "failedAssets": [],
+    "unexpectedApiRequests": []
+  }
+}

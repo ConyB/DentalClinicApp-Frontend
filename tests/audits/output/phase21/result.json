@@ -1,0 +1,52 @@
+{
+  "status": "pass",
+  "chromium": "real headless Chromium via Playwright",
+  "triangulation": {
+    "operations": [
+      "dashboard",
+      "appointments",
+      "waiting room",
+      "appointment report"
+    ],
+    "clinical": [
+      "encounter register",
+      "encounter context",
+      "dental chart",
+      "treatment plans",
+      "documents",
+      "clinical report"
+    ],
+    "finance": [
+      "dashboard",
+      "finance report",
+      "outstanding register",
+      "patient billing",
+      "receipt document"
+    ],
+    "recalls": [
+      "register",
+      "report",
+      "patient profile"
+    ]
+  },
+  "persistence": {
+    "checkIn": "pass",
+    "paymentReceipt": "pass",
+    "refresh": "pass",
+    "duplicateProtection": "pass"
+  },
+  "finalReset": {
+    "valid": true,
+    "payments": 7,
+    "receipts": 7,
+    "queue": 2,
+    "balance": 70000
+  },
+  "findings": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "missingAssets": [],
+    "apiRequests": []
+  }
+}
